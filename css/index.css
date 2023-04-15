@@ -1880,7 +1880,7 @@ hr:before {
   left: 5%;
   z-index: 1;
   color: var(--hr-before-color);
-  content: '\f0f3';
+  content: '\e607';
   font-size: 16px;
   line-height: 1;
   -webkit-transition: all 1s ease-in-out;
@@ -1911,7 +1911,7 @@ table td {
   border: var(--style-border-always);
 }
 *::selection {
-  background: #3b70fc;
+  background: #2128bd;
   color: #f7f7f7;
 }
 button {
@@ -5911,7 +5911,7 @@ h1.page-title + .tag-cloud-list {
   position: absolute;
   top: calc(50% - 7px);
   color: #f47466;
-  content: '\f0c1';
+  content: '\e64a';
   line-height: 1;
   -webkit-transition: all 0.2s ease-out;
   -moz-transition: all 0.2s ease-out;
@@ -7164,12 +7164,6 @@ h1.page-title + .tag-cloud-list {
   background: url("/img/comment_bg.png") 100% 100% no-repeat;
 }
 #vcomment textarea:focus {
-  background-image: none;
-}
-#waline-wrap textarea {
-  background: url("/img/comment_bg.png") 100% 100% no-repeat;
-}
-#waline-wrap textarea:focus {
   background-image: none;
 }
 .fireworks {
