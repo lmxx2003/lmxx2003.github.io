@@ -10603,8 +10603,8 @@ body[data-type="about"] #web_bg {
   width: 140px;
   border-radius: 20px;
   justify-content: center;
-  background: var(--anzhiyu-card-bg);
-  color: var(--font-color);
+  background: var(--anzhiyu-black-op);
+  color: var(--anzhiyu-white);
   display: flex;
   align-items: center;
   z-index: 1;
@@ -11685,7 +11685,7 @@ body[data-type="album_detail"] #page .page-title {
 }
 
 body[data-type="album_detail"] #page .author-content-item .card-content .banner-button-group .banner-button:hover {
-  color: var(--anzhiyu-white);
+  color: var(--anzhiyu-black-op);
   border-radius: 20px !important;
 }
 
