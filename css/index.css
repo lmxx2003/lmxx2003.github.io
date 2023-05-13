@@ -8015,7 +8015,7 @@ ul.menus_item_child {
 #page-header #nav #page-name {
   display: inline;
   font-weight: bold;
-  padding: 4px 8px;
+  padding: 4px 24px;
   opacity: 0;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
   filter: alpha(opacity=0);
