@@ -6,7 +6,7 @@
   <link href="https://blog.mxne.cn/atom.xml" rel="self"/>
   
   <link href="https://blog.mxne.cn/"/>
-  <updated>2023-05-21T05:50:11.121Z</updated>
+  <updated>2023-05-27T05:33:07.511Z</updated>
   <id>https://blog.mxne.cn/</id>
   
   <author>
@@ -15,6 +15,49 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>免费申请讯飞星火大模型</title>
+    <link href="https://blog.mxne.cn/posts/47e6.html"/>
+    <id>https://blog.mxne.cn/posts/47e6.html</id>
+    <published>2023-05-27T04:38:09.000Z</published>
+    <updated>2023-05-27T05:33:07.511Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="免费注册"><a href="#免费注册" class="headerlink" title="免费注册"></a>免费注册</h3><ol><li>进入 <a href="https://xinghuo.xfyun.cn/">https://xinghuo.xfyun.cn/</a><br><img src="https://bu.dusays.com/2023/05/27/64718e1fa496e.webp" alt="xfxh1"></li><li>填写手机号登录<br><img src="https://bu.dusays.com/2023/05/27/64718e1fa47fb.webp" alt="xfxh2"></li><li>填写问卷</li><li>等待消息（会给你发送信息，我等了大概三四天吧）</li></ol><h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><p><img src="https://bu.dusays.com/2023/05/27/64718e1fa4961.webp" alt="xfxh3"></p><p>还是挺不错的。有兴趣的可以试一试，挺简单的。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;免费注册&quot;&gt;&lt;a href=&quot;#免费注册&quot; class=&quot;headerlink&quot; title=&quot;免费注册&quot;&gt;&lt;/a&gt;免费注册&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;进入 &lt;a href=&quot;https://xinghuo.xfyun.cn/&quot;&gt;https://xinghuo.x</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>归并排序</title>
+    <link href="https://blog.mxne.cn/posts/f8df.html"/>
+    <id>https://blog.mxne.cn/posts/f8df.html</id>
+    <published>2023-05-26T11:32:02.000Z</published>
+    <updated>2023-05-27T05:30:49.419Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="什么是归并排序？"><a href="#什么是归并排序？" class="headerlink" title="什么是归并排序？"></a>什么是归并排序？</h3><p>归并排序分为两步：</p><ol><li><strong>拆分</strong>：将待排序的数组递归地拆分成两个子数组，直到每个子数组只包含一个元素为止。这可以通过不断将数组拆分成左右两半来实现。</li><li><strong>合并</strong>：将拆分后的子数组两两合并，合并的同时进行排序，得到更大的已排序子数组，直到最终将所有子数组合并成一个完整的有序数组。合并操作会将两个有序的子数组合并成一个有序的大数组。</li></ol><p><img src="https://bu.dusays.com/2023/05/27/64717851a3a1e.gif" alt="mergeSort"></p><h3 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">merge</span><span class="params">(<span class="type">int</span> arr[], <span class="type">int</span> start, <span class="type">int</span> mid, <span class="type">int</span> end)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span>* temp = (<span class="type">int</span>*)<span class="built_in">malloc</span>((end - start + <span class="number">1</span>) * <span class="keyword">sizeof</span>(<span class="type">int</span>)); <span class="comment">// 开辟动态内存，来存储临时数组</span></span><br><span class="line">    <span class="keyword">if</span> (temp == <span class="literal">NULL</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;Failed to allocate memory for temp array!&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">int</span> k = <span class="number">0</span>; <span class="comment">// 临时数组下标</span></span><br><span class="line">    <span class="type">int</span> i = start; <span class="comment">// 左子序列起始位置</span></span><br><span class="line">    <span class="type">int</span> j = mid + <span class="number">1</span>; <span class="comment">// 右子序列起始位置</span></span><br><span class="line">    <span class="keyword">while</span> (i &lt;= mid &amp;&amp; j &lt;= end) <span class="comment">// 将两个子序列合并成一个有序的序列</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (arr[i] &lt; arr[j])</span><br><span class="line">        &#123;</span><br><span class="line">            temp[k++] = arr[i++];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            temp[k++] = arr[j++];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">while</span> (i &lt;= mid) <span class="comment">// 将左序列剩余部分拷贝进 temp  【i, mid】</span></span><br><span class="line">    &#123;</span><br><span class="line">        temp[k++] = arr[i++];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">while</span> (j &lt;= end) <span class="comment">// 将右序列剩余部分拷贝进 temp  【j, end】</span></span><br><span class="line">    &#123;</span><br><span class="line">        temp[k++] = arr[j++];</span><br><span class="line">    &#125;</span><br><span class="line">    k = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> (start &lt;= end) <span class="comment">// 将 temp 中存储的有序序列从 start 处开始，按照顺序放回原数组</span></span><br><span class="line">    &#123;</span><br><span class="line">        arr[start++] = temp[k++];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">free</span>(temp);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">merge_sort</span><span class="params">(<span class="type">int</span> arr[], <span class="type">int</span> start, <span class="type">int</span> end)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span> (start &lt; end) <span class="comment">// 终止条件：区间内只有一个元素</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="type">int</span> mid = (start + end) / <span class="number">2</span>; <span class="comment">// 分割数组，将其递归分成两个子序列进行排序</span></span><br><span class="line">        merge_sort(arr, start, mid);</span><br><span class="line">        merge_sort(arr, mid + <span class="number">1</span>, end);</span><br><span class="line">        merge(arr, start, mid, end); <span class="comment">// 将两个有序子序列合并</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> arr[] = &#123; <span class="number">10</span>,<span class="number">9</span>,<span class="number">8</span>,<span class="number">7</span>,<span class="number">6</span>,<span class="number">5</span>,<span class="number">4</span>,<span class="number">3</span>,<span class="number">2</span>,<span class="number">1</span> &#125;;</span><br><span class="line">    <span class="type">int</span> sz = <span class="keyword">sizeof</span>(arr) / <span class="keyword">sizeof</span>(arr[<span class="number">0</span>]);</span><br><span class="line">    <span class="type">int</span> start = <span class="number">0</span>;</span><br><span class="line">    <span class="type">int</span> end = sz - <span class="number">1</span>;</span><br><span class="line">    merge_sort(arr, start, end);</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; sz; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%d &quot;</span>, arr[i]);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">输出：</span><br><span class="line"><span class="number">1</span> <span class="number">2</span> <span class="number">3</span> <span class="number">4</span> <span class="number">5</span> <span class="number">6</span> <span class="number">7</span> <span class="number">8</span> <span class="number">9</span> <span class="number">10</span></span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;什么是归并排序？&quot;&gt;&lt;a href=&quot;#什么是归并排序？&quot; class=&quot;headerlink&quot; title=&quot;什么是归并排序？&quot;&gt;&lt;/a&gt;什么是归并排序？&lt;/h3&gt;&lt;p&gt;归并排序分为两步：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;拆分&lt;/strong&gt;：将待排</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>C语言-统计单词个数</title>
@@ -36,9 +79,9 @@
     <category term="C语言" scheme="https://blog.mxne.cn/categories/C%E8%AF%AD%E8%A8%80/"/>
     
     
-    <category term="C语言" scheme="https://blog.mxne.cn/tags/C%E8%AF%AD%E8%A8%80/"/>
-    
     <category term="编程题" scheme="https://blog.mxne.cn/tags/%E7%BC%96%E7%A8%8B%E9%A2%98/"/>
+    
+    <category term="C语言" scheme="https://blog.mxne.cn/tags/C%E8%AF%AD%E8%A8%80/"/>
     
   </entry>
   
@@ -89,9 +132,9 @@
     <category term="C语言" scheme="https://blog.mxne.cn/categories/C%E8%AF%AD%E8%A8%80/"/>
     
     
-    <category term="C语言" scheme="https://blog.mxne.cn/tags/C%E8%AF%AD%E8%A8%80/"/>
-    
     <category term="编程题" scheme="https://blog.mxne.cn/tags/%E7%BC%96%E7%A8%8B%E9%A2%98/"/>
+    
+    <category term="C语言" scheme="https://blog.mxne.cn/tags/C%E8%AF%AD%E8%A8%80/"/>
     
   </entry>
   
@@ -115,9 +158,9 @@
     <category term="C语言" scheme="https://blog.mxne.cn/categories/C%E8%AF%AD%E8%A8%80/"/>
     
     
-    <category term="C语言" scheme="https://blog.mxne.cn/tags/C%E8%AF%AD%E8%A8%80/"/>
-    
     <category term="编程题" scheme="https://blog.mxne.cn/tags/%E7%BC%96%E7%A8%8B%E9%A2%98/"/>
+    
+    <category term="C语言" scheme="https://blog.mxne.cn/tags/C%E8%AF%AD%E8%A8%80/"/>
     
   </entry>
   
@@ -344,9 +387,9 @@
     <category term="C语言" scheme="https://blog.mxne.cn/categories/C%E8%AF%AD%E8%A8%80/"/>
     
     
-    <category term="C语言" scheme="https://blog.mxne.cn/tags/C%E8%AF%AD%E8%A8%80/"/>
-    
     <category term="编程题" scheme="https://blog.mxne.cn/tags/%E7%BC%96%E7%A8%8B%E9%A2%98/"/>
+    
+    <category term="C语言" scheme="https://blog.mxne.cn/tags/C%E8%AF%AD%E8%A8%80/"/>
     
   </entry>
   
@@ -371,9 +414,9 @@
     <category term="C语言" scheme="https://blog.mxne.cn/categories/C%E8%AF%AD%E8%A8%80/"/>
     
     
-    <category term="C语言" scheme="https://blog.mxne.cn/tags/C%E8%AF%AD%E8%A8%80/"/>
-    
     <category term="编程题" scheme="https://blog.mxne.cn/tags/%E7%BC%96%E7%A8%8B%E9%A2%98/"/>
+    
+    <category term="C语言" scheme="https://blog.mxne.cn/tags/C%E8%AF%AD%E8%A8%80/"/>
     
   </entry>
   
@@ -490,60 +533,6 @@
     <category term="前端" scheme="https://blog.mxne.cn/tags/%E5%89%8D%E7%AB%AF/"/>
     
     <category term="CSS" scheme="https://blog.mxne.cn/tags/CSS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>水仙花数</title>
-    <link href="https://blog.mxne.cn/posts/e404.html"/>
-    <id>https://blog.mxne.cn/posts/e404.html</id>
-    <published>2023-01-16T08:02:35.000Z</published>
-    <updated>2023-04-29T08:06:43.736Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="什么是水仙花数"><a href="#什么是水仙花数" class="headerlink" title="什么是水仙花数"></a>什么是水仙花数</h2><blockquote><p>水仙花数：一个<strong>三位数</strong>，其各位数字立方和等于该数本身。</p></blockquote><h2 id="举例："><a href="#举例：" class="headerlink" title="举例："></a>举例：</h2><p>123</p><p>123 % 10 = 3</p><p>123 / 10 % 10 = 2</p><p>123 / 100 = 1</p><h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> a, b, c;</span><br><span class="line">    <span class="type">int</span> i = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">100</span>; i &lt; <span class="number">1000</span>; i++)</span><br><span class="line">    &#123;</span><br><span class="line">      a = i % <span class="number">10</span>;       <span class="comment">// 个位</span></span><br><span class="line">      b = i / <span class="number">10</span> % <span class="number">10</span>;  <span class="comment">// 十位</span></span><br><span class="line">      c = i / <span class="number">100</span>;      <span class="comment">// 百位</span></span><br><span class="line"></span><br><span class="line">      <span class="keyword">if</span> (i == a * a * a + b * b * b + c * c * c)</span><br><span class="line">        &#123;</span><br><span class="line">           <span class="built_in">printf</span>(<span class="string">&quot;%d &quot;</span>, i);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;什么是水仙花数&quot;&gt;&lt;a href=&quot;#什么是水仙花数&quot; class=&quot;headerlink&quot; title=&quot;什么是水仙花数&quot;&gt;&lt;/a&gt;什么是水仙花数&lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;水仙花数：一个&lt;strong&gt;三位数&lt;/strong&gt;，其各位数字立方和等</summary>
-      
-    
-    
-    
-    <category term="C语言" scheme="https://blog.mxne.cn/categories/C%E8%AF%AD%E8%A8%80/"/>
-    
-    
-    <category term="C语言" scheme="https://blog.mxne.cn/tags/C%E8%AF%AD%E8%A8%80/"/>
-    
-    <category term="编程题" scheme="https://blog.mxne.cn/tags/%E7%BC%96%E7%A8%8B%E9%A2%98/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>斐波那契</title>
-    <link href="https://blog.mxne.cn/posts/66a2.html"/>
-    <id>https://blog.mxne.cn/posts/66a2.html</id>
-    <published>2023-01-16T07:40:23.000Z</published>
-    <updated>2023-04-29T08:06:43.732Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="什么是斐波那契？"><a href="#什么是斐波那契？" class="headerlink" title="什么是斐波那契？"></a>什么是斐波那契？</h3><blockquote><p>像如下这样的数列：1，1，2，3，5，8，13，21，34，55……</p><p>从第三项开始，每一项都等于前两项之和。</p></blockquote><p>斐波那契数列是前两个数的和等于第三个数（依次类推）所以我们需要来创建三个变量来代表前两个数和第三个数，用后一个数赋值给前一个数的方式实现将数字一个一个想后推移</p><h3 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> a = <span class="number">1</span>;</span><br><span class="line">    <span class="type">int</span> b = <span class="number">1</span>;</span><br><span class="line">    <span class="type">int</span> c;</span><br><span class="line">    <span class="type">int</span> i = <span class="number">0</span>;</span><br><span class="line">    <span class="type">int</span> n = <span class="number">0</span>;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;n);  <span class="comment">// 第几项</span></span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">3</span>; i &lt;= n; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        c = a + b;</span><br><span class="line">        a = b;</span><br><span class="line">        b = c;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>, c);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">-------------------------------</span><br><span class="line">    </span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> a = <span class="number">1</span>, b = <span class="number">1</span>, c = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= <span class="number">40</span>; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%12d\n&quot;</span>, a);</span><br><span class="line">        c = a + b;</span><br><span class="line">        a = b;</span><br><span class="line">        b = c;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h3 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h3><p>每次输出两项</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> a = <span class="number">1</span>, b = <span class="number">1</span>, c = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= <span class="number">20</span>; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%14d\n%14d\n&quot;</span>, a, b);</span><br><span class="line">        a = a + b;</span><br><span class="line">        b = a + b;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h3 id=&quot;什么是斐波那契？&quot;&gt;&lt;a href=&quot;#什么是斐波那契？&quot; class=&quot;headerlink&quot; title=&quot;什么是斐波那契？&quot;&gt;&lt;/a&gt;什么是斐波那契？&lt;/h3&gt;&lt;blockquote&gt;
-&lt;p&gt;像如下这样的数列：1，1，2，3，5，8，13，21，34，55…</summary>
-      
-    
-    
-    
-    <category term="C语言" scheme="https://blog.mxne.cn/categories/C%E8%AF%AD%E8%A8%80/"/>
-    
-    
-    <category term="C语言" scheme="https://blog.mxne.cn/tags/C%E8%AF%AD%E8%A8%80/"/>
-    
-    <category term="编程题" scheme="https://blog.mxne.cn/tags/%E7%BC%96%E7%A8%8B%E9%A2%98/"/>
     
   </entry>
   
