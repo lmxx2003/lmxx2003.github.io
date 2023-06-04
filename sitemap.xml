@@ -605,14 +605,14 @@
 
   
   <url>
-    <loc>https://blog.mxne.cn/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/</loc>
+    <loc>https://blog.mxne.cn/tags/hexo/</loc>
     <lastmod>2023-06-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://blog.mxne.cn/tags/hexo/</loc>
+    <loc>https://blog.mxne.cn/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/</loc>
     <lastmod>2023-06-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -633,6 +633,13 @@
   </url>
   
   <url>
+    <loc>https://blog.mxne.cn/tags/%E6%97%A5%E5%B8%B8/</loc>
+    <lastmod>2023-06-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.mxne.cn/tags/%E5%89%8D%E7%AB%AF/</loc>
     <lastmod>2023-06-04</lastmod>
     <changefreq>weekly</changefreq>
@@ -641,13 +648,6 @@
   
   <url>
     <loc>https://blog.mxne.cn/tags/CSS/</loc>
-    <lastmod>2023-06-04</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.mxne.cn/tags/%E6%97%A5%E5%B8%B8/</loc>
     <lastmod>2023-06-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -712,14 +712,14 @@
 
   
   <url>
-    <loc>https://blog.mxne.cn/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/</loc>
+    <loc>https://blog.mxne.cn/categories/hexo/</loc>
     <lastmod>2023-06-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://blog.mxne.cn/categories/hexo/</loc>
+    <loc>https://blog.mxne.cn/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/</loc>
     <lastmod>2023-06-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -733,14 +733,14 @@
   </url>
   
   <url>
-    <loc>https://blog.mxne.cn/categories/%E5%89%8D%E7%AB%AF/</loc>
+    <loc>https://blog.mxne.cn/categories/%E5%85%B6%E4%BB%96/</loc>
     <lastmod>2023-06-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://blog.mxne.cn/categories/%E5%85%B6%E4%BB%96/</loc>
+    <loc>https://blog.mxne.cn/categories/%E5%89%8D%E7%AB%AF/</loc>
     <lastmod>2023-06-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
