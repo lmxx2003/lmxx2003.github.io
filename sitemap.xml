@@ -2,6 +2,24 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.mxne.cn/stars/index.html</loc>
+    
+    <lastmod>2023-06-09</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.mxne.cn/posts/d50a.html</loc>
+    
+    <lastmod>2023-06-09</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.mxne.cn/posts/a77d.html</loc>
     
     <lastmod>2023-06-09</lastmod>
@@ -32,15 +50,6 @@
     <loc>https://blog.mxne.cn/link/index.html</loc>
     
     <lastmod>2023-06-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.mxne.cn/stars/index.html</loc>
-    
-    <lastmod>2023-06-03</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -633,6 +642,20 @@
   </url>
   
   <url>
+    <loc>https://blog.mxne.cn/tags/Tag-Plugins/</loc>
+    <lastmod>2023-06-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.mxne.cn/tags/Hexo/</loc>
+    <lastmod>2023-06-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.mxne.cn/tags/%E6%97%A5%E5%B8%B8/</loc>
     <lastmod>2023-06-09</lastmod>
     <changefreq>weekly</changefreq>
@@ -733,14 +756,14 @@
   </url>
   
   <url>
-    <loc>https://blog.mxne.cn/categories/%E5%85%B6%E4%BB%96/</loc>
+    <loc>https://blog.mxne.cn/categories/%E8%8B%B1%E8%AF%AD/</loc>
     <lastmod>2023-06-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://blog.mxne.cn/categories/%E8%8B%B1%E8%AF%AD/</loc>
+    <loc>https://blog.mxne.cn/categories/%E5%85%B6%E4%BB%96/</loc>
     <lastmod>2023-06-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
