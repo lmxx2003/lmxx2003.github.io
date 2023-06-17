@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.mxne.cn/posts/75b7.html</loc>
+    
+    <lastmod>2023-06-17</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.mxne.cn/posts/f7ee.html</loc>
     
     <lastmod>2023-06-17</lastmod>
@@ -621,6 +630,13 @@
   </url>
   
   <url>
+    <loc>https://blog.mxne.cn/tags/%E6%97%A5%E5%B8%B8/</loc>
+    <lastmod>2023-06-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.mxne.cn/tags/hexo/</loc>
     <lastmod>2023-06-17</lastmod>
     <changefreq>weekly</changefreq>
@@ -642,7 +658,14 @@
   </url>
   
   <url>
-    <loc>https://blog.mxne.cn/tags/%E6%97%A5%E5%B8%B8/</loc>
+    <loc>https://blog.mxne.cn/tags/Tag-Plugins/</loc>
+    <lastmod>2023-06-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.mxne.cn/tags/Hexo/</loc>
     <lastmod>2023-06-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -657,20 +680,6 @@
   
   <url>
     <loc>https://blog.mxne.cn/tags/CSS/</loc>
-    <lastmod>2023-06-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.mxne.cn/tags/Tag-Plugins/</loc>
-    <lastmod>2023-06-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.mxne.cn/tags/Hexo/</loc>
     <lastmod>2023-06-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -742,6 +751,13 @@
   </url>
   
   <url>
+    <loc>https://blog.mxne.cn/categories/%E5%85%B6%E4%BB%96/</loc>
+    <lastmod>2023-06-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.mxne.cn/categories/hexo/</loc>
     <lastmod>2023-06-17</lastmod>
     <changefreq>weekly</changefreq>
@@ -750,13 +766,6 @@
   
   <url>
     <loc>https://blog.mxne.cn/categories/Hexo/</loc>
-    <lastmod>2023-06-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.mxne.cn/categories/%E5%85%B6%E4%BB%96/</loc>
     <lastmod>2023-06-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
