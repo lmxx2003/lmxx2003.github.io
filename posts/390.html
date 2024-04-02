@@ -1,0 +1,868 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"><title>数字媒体处理及应用 | Mxne</title><meta name="keywords" content="计算机基础,数字媒体处理及应用"><meta name="author" content="Mxne"><meta name="copyright" content="Mxne"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#f7f9fe"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-touch-fullscreen" content="yes"><meta name="apple-mobile-web-app-title" content="数字媒体处理及应用"><meta name="application-name" content="数字媒体处理及应用"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="#f7f9fe"><meta property="og:type" content="article"><meta property="og:title" content="数字媒体处理及应用"><meta property="og:url" content="https://blog.mxne.cn/posts/390.html"><meta property="og:site_name" content="Mxne"><meta property="og:description" content="文本与文本处理文本由一系列“字符”(character) 组成，每个字符均使用二进制编码表示。 文本在计算机中的处理过程是：   字符：文字的基本元素是字母和符号，统称为“字符”(character)。 字符集：一组特定字符的集合。不同的字符集包含的字符数目与内容不同，如: 中文字符集、西文字符集、"><meta property="og:locale" content="zh-CN"><meta property="og:image" content="https://bu.dusays.com/2023/09/29/651641735bedd.webp"><meta property="article:author" content="Mxne"><meta property="article:tag" content="mxne,博客,blog"><meta name="twitter:card" content="summary"><meta name="twitter:image" content="https://bu.dusays.com/2023/09/29/651641735bedd.webp"><meta name="description" content="文本与文本处理文本由一系列“字符”(character) 组成，每个字符均使用二进制编码表示。 文本在计算机中的处理过程是：   字符：文字的基本元素是字母和符号，统称为“字符”(character)。 字符集：一组特定字符的集合。不同的字符集包含的字符数目与内容不同，如: 中文字符集、西文字符集、"><link rel="shortcut icon" href="https://bu.dusays.com/2023/08/23/64e59073b1151.png"><link rel="canonical" href="https://blog.mxne.cn/posts/390"><link rel="preconnect" href="//cdn.cbd.int"/><meta name="google-site-verification" content="xxx"/><meta name="baidu-site-verification" content="codeva-2k8jgGsIdQ"/><meta name="msvalidate.01" content="C637A55AECB73A79B3F734EA2AC871D9"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.cbd.int/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.cbd.int/@fancyapps/ui@5.0.28/dist/fancybox/fancybox.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/swiper/swiper.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  linkPageTop: {"enable":true,"title":"与数百名博主无限进步","addFriendPlaceholder":"昵称（请勿包含博客等字样）：\n网站地址（要求博客地址，请勿提交个人主页）：\n头像图片url（请提供尽可能清晰的图片，我会上传到我自己的图床）：\n描述：\n站点截图（可选）：\n"},
+  peoplecanvas: undefined,
+  postHeadAiDescription: {"enable":true,"gptName":"Mxne","mode":"tianli","switchBtn":false,"btnLink":"https://afdian.net/item/886a79d4db6711eda42a52540025c377","randomNum":2,"basicWordCount":1000,"key":"7d28bd78d177abc3b74e","Referer":"https://blog.mxne.cn/"},
+  diytitle: undefined,
+  LA51: {"enable":true,"ck":"K29yhp40Rihob4vv","LingQueMonitorID":"K29y4fq5hPjbU0l2"},
+  greetingBox: undefined,
+  twikooEnvId: 'https://twikoo.mxne.cn/',
+  commentBarrageConfig:{"enable":true,"maxBarrage":1,"barrageTime":4000,"accessToken":"ce234037829d4495abec5955a68e7ae3","mailMd5":""},
+  root: '/',
+  preloader: {"source":3},
+  friends_vue_info: {"apiurl":"https://fridendscircle.mxne.cn/"},
+  navMusic: true,
+  mainTone: {"mode":"api","api":"https://imgcolor.mxne.cn/api?img=","cover_change":true},
+  authorStatus: {"skills":["🤖️ 数码科技爱好者","🔍 分享与热心帮助","🏠 智能家居小能手","🔨 设计开发一条龙","🤝 专修交互与设计","🏃 脚踏实地行动派","🧱 团队小组发动机","💢 壮汉人狠话不多"]},
+  algolia: {"appId":"DMKB8XOOFA","apiKey":"acdbc12012725203526148c001cddcb3","indexName":"my-hexo-blog","hits":{"per_page":6},"languages":{"input_placeholder":"输入关键词后按下回车查找","hits_empty":"找不到您查询的内容：${query}","hits_stats":"找到 ${hits} 条结果，用时 ${time} 毫秒"}},
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简","rightMenuMsgToTraditionalChinese":"转为繁体","rightMenuMsgToSimplifiedChinese":"转为简体"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":330},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    simplehomepage: true,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"copy":true,"copyrightEbable":false,"limitCount":50,"languages":{"author":"作者: Mxne","link":"链接: ","source":"来源: Mxne","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。","copySuccess":"复制成功，复制和转载请标注本文地址"}},
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#425AEF","bgDark":"#1f1f1f","position":"top-center"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.cbd.int/flickr-justified-gallery@2.1.2/dist/fjGallery.min.js',
+      css: 'https://cdn.cbd.int/flickr-justified-gallery@2.1.2/dist/fjGallery.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false,
+  shortcutKey: undefined,
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  configTitle: 'Mxne',
+  title: '数字媒体处理及应用',
+  postAI: 'true',
+  pageFillDescription: '文本与文本处理, 西文字符集, ASCII, ASCII的编码和存储, 汉字编码, GB2312, GBK, GB18030, UCS/Unicode, 区位码, 汉字的国标码（交换码）, 汉字的机内码, 文字符号的输入, 键盘输入, 联机手写输入, 语言输入, 文本的分类, 简单文本（纯文本）, 丰富格式文本, 超文本, 文本的编辑、排版与处理, 文本的编辑, 文本的排版, 文本的处理, 文本检索, 文本的展现, 字库, 图像与图形, 图像, 图像的获取, 图像获取过程⭐, 图像的表示, 图像的主要参数, 数字图像的数据量, 数字图像的压缩, 图像数据压缩的必要性, 图像数据压缩的两种类型, 压缩编码方法的评价标准⭐, 图像文件格式⭐, BMP格式, TIF格式, GIF格式, JPEG格式, PNG格式, Webp格式, 数字图像处理, 主要目的, 数字图像处理软件, PS主要功能包括, 图形, 计算机绘图过程, 景物的两类建模方法, 计算机图形的应用, 矢量绘图软件, 数字音频及应用, 数字音频的获取, 数字音频的获取设备, 声卡, 数字音频的输出, 音响, 数字音频的主要参数, 数字音频的码率, 音频文件格式, 音频常用的压缩编码, 数字音频的编辑【考点mini】, 数字音频的播放软件【考点mini】, 语音识别, 语音合成, 计算机合成话音（语音）, 文语转换(TTS), 计算机合成音乐(MIDI), MIDI的优点, MIDI的不足, 数字视频及应用, 数字视频, 数字视频的主要参数, 数字视频信号的获取, 数字视频的获取设备, 视频编码, 数字视频的应用, 流媒体技术, 计算机动画, Flash动画文本与文本处理文本由一系列字符组成每个字符均使用二进制编码表示文本在计算机中的处理过程是字符文字的基本元素是字母和符号统称为字符字符集一组特定字符的集合不同的字符集包含的字符数目与内容不同如中文字符集西文字符集日文字符集等字符的编码字符集中每个字符的二进位表示称为该字符的编码或代码不同的字符其编码各不相同西文字符集又名美国标准信息交换码基本的字符集共有个字符个可打印字符常用的字母数字标点符号等个控制字符的编码和存储基本编码每个字符使用个二进位进行编码个二进位来存储每个字节中多余出来的一位最高位置为用作奇偶校验汉字编码每一个汉字使用位个字节表示为了与字符相区别每个字节的最高位均为这种高位均为的双字节汉字编码就称为汉字的机内码又称内码均为简体字是我国年发布的全称为汉字内码扩充规范他一共有个汉字和个图形符号除了中的全部汉字和符号之外还收录了包括繁体字在内的大量汉字和符号向下兼容第一个字节最高位必须为第二个字节子高位可以是也可以是目的为了保护我国已有的大量信息资源既能与编码标准接轨又能向下兼容和汉字编码标准共有多个汉字收录字符最多不等长编码目的为了能实现全球所有不同语言文字统一编码的国际编码标准计算机中文字符号可采用不同的编码标准计算机生成和处理的数字文档中对采用何种编码一般会有说明标志和智能手机都能支持多国文字包括汉字的的输入输出存储处理显示和传输但默认采用哪种语言文字和编码标准可在操作系统和中设置或说明不同操作系统不同编程语言和不同默认采用的字符集及其编码并不一致相互间进行通信和处理时往往需要进行编码转换若出错则会出现乱码区位码国标码国标码机内码区位码机内码区位码将所有的汉字编入一个的二维表中行和列共同定位一个字行就是区列就是位合并就是区位码区位码是一个四位的十进制数前两位叫区码后两位叫位码区位码可以表示某个具体的汉字但是无法与码进行兼容汉字的国标码交换码不仅仅包含中文汉字也包含各种那个字母数字符号与编码中的字母数字符号重复故覆盖中符号数字字母部分将其中的符号重新编入中而对于中前个控制字符继续沿用所以保留前字符就需要将汉字编码向后偏移对应十六进制就是故区位码国标码汉字的机内码汉字机内码又称汉字码简称内码国标码覆盖了码但是计算机内部仍然存在码所以某些汉字的国标码仍有可能会和码进行重复重复的后果会产生乱码所以不应覆盖而是要兼容码故根据码最高位通常为的特点将国标码每个字节的最高位从换成与码进行区分故国标码机内码文字符号的输入键盘输入分类数字编码电报码区位码字音编码键字形编码五笔形音编码汉字的输入码不是唯一的汉字的机内码是唯一的联机手写输入优点自然流畅小型化适合移动计算不足别速度和正确性还需提高书写要求还要降低语言输入优点自然方便适合移动计算不足对说话人说话方式说话内容的适应能力要改进识别速度和正确性还需进一步提高文本的分类按照是否具有排版格式简单文本和丰富格式文本按照文本内容的组织方式线性文本和超文本简单文本纯文本简单文本是由一连串表达正文内容的字符包括汉字的编码所组成它几乎不包含任何格式信息和结构信息其文件的后缀名为简单文本的文件体积小通用性好几乎所有的文字处理软件都能识别和处理但是它没有字体字号的变化不能插入图片表格也不能建立超链接记事本采用的是编码丰富格式文本有字体字号等属性变化设置了段落和页面排版格式的文本称为丰富格式文本丰富格式文本中除了正文内容之外还使用了许多标记来描述字符的属性和格式的设置以及插入图表公式表格等等组成正文标记常见标记语言超文本标记语言可扩展标记语言不同软件制作的丰富格式文本其文件扩展名各不相同例如帮助文件一般并不兼容需要使用不同的进行处理超文本传统纸质文本内容的组织是线性的而超文本概念是对传统文本的一种扩展除了顺序阅读方式外还可以通过文本内部所设置的链接进行跳转导航回溯等操作超文本采用网状结构来组织信息文本中的各个部分按照其内容的逻辑关系互相链接网页就是典型的超文本结构超链是有向的起点位置称为涟源文档中称为锚目的地称为链宿涟源锚和链宿使用标记语言指出超文本属于丰富格式文本文本的编辑排版与处理文本的编辑目的确保文本内容正确无误操作对字词句和段落进行添加删除修改等操作的功能在文本的任何位置都可以插入新的文字从文本的任何位置都可以删除不需要的文字将一段文字从一处移动到另一处将一段文字从一处复制到另一处在文本中自动查找指定的词语用一个词语自动替换文本中指定的词语文本的排版目的使文本清晰美观便于阅读操作内容对文本中的字符段落乃至整篇文章的格式进行设计和调整分成个层次对字符格式进行设置对段落格式进行设置对文档页面进行格式设置文本的处理对文木中所含文字信息的形音义等进行分析和处理例如字数统计文语转换文摘生成文本检索等字数统计词频统计简繁体相互转换汉字拼音相互转换词语排序词语错误检测文句语法检查自动分词词性标注词义辨识大陆台湾术语转换关键词提取文摘自动生成文本分类文本检索关键词检索全文检索文本过滤文语转换语音合成文种转换机器翻译篇章理解自动问答自动写作等文本压缩文本加密文本著作权保护文本检索关键词检索全文检索搜索引擎文本检索存在准确性问题因此检索结果并非全部都是用户想要的文本的展现文本展现方式打印输出纸质屏幕显示电子书文本展现的过程对文本的格式描述进行解释生成文字和图表的映像传送到显示器或打印机输出字库定义同一种字体的所有字符的形状描述信息的集合种不同的字库点阵描述计算存储空间轮廓描述字体字库不同的字体宋体仿宋楷体黑体等对应不同的字库字符集字库在同一个字符集下文本的输出所使用的字库不同图像与图形计算机中的图按其生成方法可以分成两类取样图像或点阵图像或位图图像和矢量图形图像图像的获取从现实世界中获得数字图像的过程称为图像的获取常用的图像获取设备手机扫描仪数码相机监控摄像头等图像获取过程图像获取的过程需要使用光学超声波或射线等生成景物的映像模拟信号并进行数字化处理步骤扫描将景物映像划分为个网格每个网格称为一个取样点从而将景物映像转换为个取样点构成的阵列分色将每个取样点的颜色分解成红绿蓝三基色若生成灰度或黑白图像则不进行分色处理取样测量每个取样点的每个分量基色的亮度也称为灰度值量化对取样点每个分量的亮度值进行转换即把模拟量使用数字量来表示位位二进制正整数图像的表示一幅图像由列行个取样点组成每个取样点是组成取样图像的基本单位称为像素图像的主要参数图像大小图像分辨率也称为图像分辨率用水平分辨率垂直分辨率表示注意垂直分辨率矩阵的行数水平分辨率矩阵的列数位平面数即像素的颜色分量的数目黑白或灰度图像只有一个位平面彩色图像有个或更多的位平面像素深度指每个像素用多少个二进位来表示它是像素的所有颜色分量的二进位数目之和像素深度决定了该图像可表示的不同颜色或不同亮度的最大数目单色图像若像素深度是位则不同亮度等级的总数为三基色组成的彩色图像若个分量的像素位数都是位则该图像的像素深度为不同颜色数目最多为真彩色图像位颜色空间类型指彩色图像所使用的颜色描述方法也叫颜色模型以下颜色模型可以互相转换显示器模型红绿蓝彩色打印机模型青品红黄黑图像编辑软件模型色彩饱和度亮度制彩色电视模型亮度信号两种色度信号数字图像的数据量数字图像数据量的计算公式以字节为单位未压缩图像数据量水平分辨率垂直分辨率像素深度几种常用格式的图像的数据量未压缩压缩之后数字图像的数据量计算以字节为单位压缩后图像数据量水平分辨率垂直分辨率像素深度压缩比数字图像的压缩图像数据压缩的必要性节省存储数字图像所需要的存储器容量提高图像的传输速度减少通信费用图像数据压缩的两种类型无损压缩用压缩后的数据还原出来的图像没有任何误差完美还原有损压缩用压缩后的数据还原出来的图像有一定的误差压缩编码方法的评价标准压缩倍数的高低压缩比大小重建图像的质量有损压缩时压缩算法的复杂程度图像文件格式格式图像格式是操作系统下使用的一种标准图像格式几乎所有的应用软件都支持支持单色色色真彩色图像一个文件一幅图像可以进行无损压缩也可不压缩格式大量用于扫描仪和桌面出版格式颜色数目不超过色适合用作插图剪贴画等色彩数要求不高的场合文件特别小适合网络传输图像格式能支持动画透明背景不支持图像格式具有累进显示功能适合网络浏览器观看格式是静止图像数据压缩编码的国际标准采用标准的图像文件扩展名是大多有损特别适合各种连续色调的彩色或灰度图像在计算机和数码相机中已得到广泛应用的最新标准是图像文件扩展名是它采用更先进的技术可取得更好的效果目前在医学图像处理中使用格式年代中期由开发主要在互联网上使用保留了文件的特性增加新功能如支持每个像素为比特的真彩色图像支持每个像素为比特的灰度图像添加通道等格式公司推出的图像文件格式压缩率比和显著提高网页平均加载时间大约可以减少格式图像编码时间比格式图像要长得多尚未得到广泛支持数字图像处理主要目的提高图像的视觉质量恢复与重建有失真和畸变的图像图像分析包括图像的分类识别和理解等图像数据的变换编码和数据压缩图像的存储管理与检索图像内容与知识产权的保护数字图像处理软件和具有基本的图像编辑功能附件中的画图软件微软工具中的公司的主要功能包括图像的控制与显示图像区域的选择图像的编辑操作图像的滤镜操作绘图功能文字编辑功能图层操作图形通过计算机和软件对景物的结构形状与外貌进行描述称为建模然后根据该描述和选定的观察位置及光线状况生成该景物的图形称为绘制计算机图形也称为计算机合成图像矢量图形计算机绘图过程建模首先是使用计算机描述景物的结构形状与外貌然后再根据其描述和用户观察景物的位置及光线情况生成该景物的图像并在屏幕上或打印机绘图仪上输出景物在计算机内的描述即为该景物的模型通常需要使用专门的软件来完成绘制计算机根据景物的模型生成其图像的过程称为绘制也叫做图像合成这是借助计算机中的绘制软件和显卡实现的景物的两类建模方法规则形体如工业产品等可以使用各种几何元素点线面体等以及表面材料的性质进行描述所建立的模型称为几何模型不规则形体如自然产物或现象需要找出它们的结构和生成规律并使用相应的算法来描述其规律如描述树木花草烟火毛发山脉等这种模型称为过程模型或算法模型计算机图形的应用计算机铺助设计和计算机辅助制造利用计算机生成各种地形图交通图天气图海洋图石油开采图等作战指挥和军事训练计算机动画和计算机艺术其它电子出版数据处理工业监控辅助教学软件工程等矢量绘图软件专业绘图软件和电子图板机械建筑等地图地理信息系统办公与事务处理平面设计电子出版等使用的绘图软件公司的公司的公司的微软公司的等中内嵌的绘图软件和中的绘图功能简单的二维图形数字音频及应用声音由振动产生通过空气等介质进行传播声音是一种波它由许多不同频率的谐波组成谐波的频率范围称为声音的带宽人耳可听见的声音在信息技术中称为音频信号简称音频两种音频话音或语音专指人的说话声音带宽仅为全频带声音如音乐声风雨声汽车声等其带宽可达到数字音频的获取音频是模拟信号为了使用计算机进行处理必须将它转换成二进制编码表示的形式这个过程称为音频信号的数字化数字化的步骤取样把时间上连续的音频信号离散成不连续的一系列的样本取样频率不应低于音频信号最高频率的两倍语音取样频率一般为全频带音频的取样频率应在以上量化取样得到的每一个样本一般使用或位二进制整数表示称为量化精度精度越高声音保真度越好噪音越低转换编码经过取样量化得到的数据还必须进行数据压缩以减少数据量并按照某种格式对数据进行组织以便计算机存储处理与传输数字音频的获取设备数字音频获取设备包括麦克风话筒和声卡麦克风话筒的作用是将声波转换成电信号然后再由声卡进行数字化声卡既负责音频信号的获取也负责音频信号的重建它控制并完成声音的输入输出声卡主要功能音频信号的获取与数字化音频信号的重建与播放声音的输入声音的合成与播放等声卡以数字信号处理器为核心是一种专用的微处理器它在完成数字音频的编码解码声音的合成以及音频编辑操作中起着重要作用数字音频的输出计算机输出声音的过程通常分成两步重建把音频信号从数字形式转换成模拟信号形式由声卡完成播放将模拟音频信号经处理和放大后送到音箱扬声器声音的重建是音频信号数字化的逆过程分成三个步骤解码把压缩编码后的数字音频恢复到压缩编码前的状态数模转换把音频样本从数字量转换成模拟量插值把时间上离散的音频信号转换成在时间上连续的模拟音频信号音响普通音箱接收的是重建的模拟声音信号数字音箱直接接收数字声音信号失真更小数字音频的主要参数取样频率语音的取样频率低一般为全频带声音如音乐取样频率高一般量化位数通常是或位声道数目单声道为双声道为立体声双声道码率比特率每秒钟的数据量数字音频的码率码率指的是每秒钟有多少二进位未压缩时数字音频的码率计算公式码率取样频率量化位数声道数单位两种常用数字音频的主要参数背压缩后数字音频的码率为压缩后的码率未压缩时的码率压缩比音频的数据量为音频的数据量码率播放时间唱片的码率唱片小时的数据量音频文件格式音频常用的压缩编码名称声道数目主要应用层数字盒式录音带层层同家庭影院数字音频的编辑考点附件中娱乐类的录音机程序是一个非常简单的数字音频编辑器具有如下功能录制音频编辑音频声音的效果处理格式转换播放音频只能播放格式的音频文件数字音频的播放软件考点操作系统捆绑了一个应用软件称为媒体播放器简称该软件可以播放音频视频文件也可以显示图片该软件播放的音频文件格式包括等也可以播放和光盘还具有管理功能支持播放列表支持从光盘上抓取音轨复制到硬盘支持刻录光盘支持与便携式音乐设备进行同步语音识别将人的说话声音转换成相应的文字这需要计算机自动识别出语音信号中的单词和语汇甚至理解其语义内容应用语音拨号语音导航设备操作控制语音文档检索听写数据录入计算机同声翻译等几种不同复杂程度的语音识别技术孤立语音连续语音识别小词汇量大词汇量语音识别特定人非特定人语音识别语音合成计算机合成音频就是计算机模仿人说话或演奏音乐计算机合成音频有两类计算机合成话音语音计算机模仿人把一段文字朗读出来即把文字转换为说话声音简称为文语转换应用有声查询文稿校对语言学习语音秘书自动报警残疾人服务等文语转换按照文本书面语言进行语音合成的过程文语转换过程原理上分成三步文本分析对文本进行分析判断每一个字的正确读音将文字序列转换成一串发音符号如国际音标或汉语拼音韵律分析根据文句的结构位置使用的标点符号以及上下文等确定发音时语气的变换以及读音的轻重缓急这些都由一组韵律控制参数来进行控制语音合成根据发音标注从语音库中取出相应的语音基元按照韵律控制参数的要求利用特定的语音合成技术对语音基元进行调整和修改最终合成出符合要求的流畅自然的语音计算机合成音乐计算机模拟各种乐器发声并按照乐谱演奏音乐应用计算机作曲配器等计算机合成音乐需要三个要素乐器乐谱和演奏员文件后缀为或相当于乐谱媒体播放器相当于演奏员在计算机中它需要发送指令到声卡音乐合成器中音乐合成器会将指令进行合成模拟乐器发声播放由机中的声卡合成由的媒体播放器软件播放音乐质量受声卡档次影响的优点数据量极小比立体声少个数量级比少个数量级易于制作和编辑修改可以与波形声音同时播放的不足能合成音乐纯音乐不能合成歌曲和语言音质与硬件设备相关数字视频及应用数字视频泛指内容随时间变化的一个图象序列又叫运动图象或活动图象常见视频电视电影动画等视频的特点内容随时间而变化伴随有与画面动作同步的声音伴音人类接受的信息来自视觉其中活动图象是信息量最丰富直观生动具体的一种承载信息的媒体视频信息的处理是多媒体技术的核心数字视频的主要参数帧频帧速率一每秒钟显示多少帧图像单位是图像扫描方式隔行扫描逐行扫描方式帧大小每帧图像的分辨率即图像宽度图像高度单位像素颜色深度像素深度图像中每个像素的二进位数目单位数字视频信号的获取视频信号的数字化过程先将三基色转换为亮度和个色差信号经滤波后再分别作取样量化和编码处理得到数字视频的个分量数字视频的获取设备视频采集卡简称视频卡数字摄像头通过光学镜头和或采集动态图像转换成数字信号并输入机脱机获取设备数码摄像机视频编码数字视频的应用可视电话通话双方能互相看见的一种电话系统电话机具有摄像显示声音等功能内置高质量镜头及视频会议多人同时参与的一种音视频通信系统类似于可视电话但多人参加通话提供的功能也更加丰富两种实施方式通过电信局的数字通信网进行政府系统的视频会议图像和声音的质量好保密性强在互联网上进行例如使用下列即时通信软件的腾迅的微信等又叫点播电视视频点播定义用户可以根据自己的需要主动收看电视节目光盘在数字视频存储中的应用流媒体技术在因特网上收听看音视频节目的种方式下载存储方式先下载存储在计算机中下载完毕后再播放缺点需要等待较长时间并需要较大的存储容量流式传输方式边下载边播放优点只需要下载一部分数据之后就可以开始一边播放一边下载等待时间短存储需求小流媒体流媒体就是一种允许在网络上让用户一边下载一边收看听音视频媒体的媒体分发技术计算机动画计算机动画一使用计算机生成一系列内容连续的画面供实时演播的一种技术它是一种计算机合成的数字视频而不是用摄像机拍摄的自然视频计算机动画制作包括在计算机中建立景物的模型描述它们的运动生成一系列逼真的图像三维计算机动画制作过程分以下几个阶段描述景物的形状与结构建模确定景物的颜色和材质纹理设置灯光和确定虚拟摄像机的位置描述场景中物体的运动和摄像机的移动绘制一系列的图像输出动画结果动画动画的图像主要有矢量图形构成因此不管怎样放大缩小它都清晰可见动画的文件扩展名为它的数据量较小便于在互联网上传输',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-04-02 14:41:55',
+  postMainColor: '',
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#18171d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#f7f9fe')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><link rel="stylesheet" href="/css/custom.css" media="defer" onload="this.media='all'"><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="Mxne" type="application/atom+xml">
+</head><body data-type="anzhiyu"><div id="web_bg"></div><div id="an_music_bg"></div><div id="loading-box" onclick="document.getElementById(&quot;loading-box&quot;).classList.add(&quot;loaded&quot;)"><div class="loading-bg"><img class="loading-img nolazyload" alt="加载头像" src="https://bu.dusays.com/2023/02/05/63df7de56a470.webp"/><div class="loading-image-dot"></div></div></div><script>const preloader = {
+  endLoading: () => {
+    document.getElementById('loading-box').classList.add("loaded");
+  },
+  initLoading: () => {
+    document.getElementById('loading-box').classList.remove("loaded")
+  }
+}
+window.addEventListener('load',()=> { preloader.endLoading() })
+setTimeout(function(){preloader.endLoading();},10000)
+
+if (true) {
+  document.addEventListener('pjax:send', () => { preloader.initLoading() })
+  document.addEventListener('pjax:complete', () => { preloader.endLoading() })
+}</script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.10/progress_bar/progress_bar.css"/><script async="async" src="https://cdn.cbd.int/pace-js@1.2.4/pace.min.js" data-pace-options="{ &quot;restartOnRequestAfter&quot;:false,&quot;eventLag&quot;:false}"></script><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><div id="nav-group"><span id="blog_name"><div class="back-home-button"><i class="anzhiyufont anzhiyu-icon-grip-vertical"></i><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">网页</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://index.lmx0.top/" title="主页"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/02/05/63df7de56a470.webp" alt="主页"/><span class="back-menu-item-text">主页</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://music.lmx0.top/" title="音乐"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/02/05/63df7de56a470.webp" alt="音乐"/><span class="back-menu-item-text">音乐</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://nav.lmx0.top/" title="引导页"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/02/05/63df7de56a470.webp" alt="引导页"/><span class="back-menu-item-text">引导页</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://news.lmx0.top/" title="每日新闻"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/02/05/63df7de56a470.webp" alt="每日新闻"/><span class="back-menu-item-text">每日新闻</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">线路</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://netlify.lmx0.top/" title="Netlify"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/02/05/63df7de56a470.webp" alt="Netlify"/><span class="back-menu-item-text">Netlify</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://cloudflare.lmx0.top/" title="Cloudflare"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/02/05/63df7de56a470.webp" alt="Cloudflare"/><span class="back-menu-item-text">Cloudflare</span></a></div></div></div></div><a id="site-name" href="/" accesskey="h"><div class="title">Mxne</div><i class="anzhiyufont anzhiyu-icon-house-chimney"></i></a></span><div class="mask-name-container"><div id="name-container"><a id="page-name" href="javascript:anzhiyu.scrollToDest(0, 500)">PAGE_NAME</a></div></div><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 文章</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><i class="fa fa-box-archive faa-tada"></i><span> 归档</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><i class="fa fa-cube faa-tada"></i><span> 分类</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><i class="fa fa-tags faa-tada"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 我的</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/music/?id=8174994633&amp;server=netease"><i class="fa fa-music faa-tada"></i><span> 音乐馆</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/bangumis/"><i class="fab fa-bilibili faa-tada"></i><span> 追番页</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/album/"><i class="fa fa-image faa-tada"></i><span> 相册集</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 友链</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/link/"><i class="fa fa-link faa-tada"></i><span> 友情链接</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/fcircle/"><i class="fa fa-anchor faa-tada"></i><span> 友链鱼塘</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/comments/"><i class="fa fa-envelope faa-tada"></i><span> 留点什么</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 关于</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/about/"><i class="fa fa-id-card faa-tada"></i><span> 关于本人</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/essay/"><i class="fa fa-bars-staggered faa-tada"></i><span> 即刻短文</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/stars/"><i class="fa fa-map-signs faa-tada"></i><span> 网址导航</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/equipment/"><i class="anzhiyufont anzhiyu-icon-dice-d20 faa-tada" style="font-size: 0.9em;"></i><span> 我的装备</span></a></li></ul></div></div></div><div id="nav-right"><div class="nav-button only-home" id="travellings_button" title="随机前往一个开往项目网站"><a class="site-page" onclick="anzhiyu.totraveling()" title="随机前往一个开往项目网站" href="javascript:void(0);" rel="external nofollow" data-pjax-state="external"><i class="anzhiyufont anzhiyu-icon-train"></i></a></div><div class="nav-button" id="randomPost_button"><a class="site-page" onclick="toRandomPost()" title="随机前往一个文章" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-dice"></i></a></div><div class="nav-button" id="search-button"><a class="site-page social-icon search" href="javascript:void(0);" title="搜索🔍" accesskey="s"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span> 搜索</span></a></div><input id="center-console" type="checkbox"/><label class="widget" for="center-console" title="中控台" onclick="anzhiyu.switchConsole();"><i class="left"></i><i class="widget center"></i><i class="widget right"></i></label><div id="console"><div class="console-card-group-reward"><ul class="reward-all console-card"><li class="reward-item"><a href="https://bu.dusays.com/2023/04/29/644caea1be856.webp" target="_blank"><img class="post-qr-code-img" alt="微信" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/04/29/644caea1be856.webp"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="https://bu.dusays.com/2023/04/29/644caea1be720.webp" target="_blank"><img class="post-qr-code-img" alt="支付宝" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/04/29/644caea1be720.webp"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div><div class="console-card-group"><div class="console-card-group-left"><div class="console-card" id="card-newest-comments"><div class="card-content"><div class="author-content-item-tips">互动</div><span class="author-content-item-title"> 最新评论</span></div><div class="aside-list"><span>正在加载中...</span></div></div></div><div class="console-card-group-right"><div class="console-card tags"><div class="card-content"><div class="author-content-item-tips">兴趣点</div><span class="author-content-item-title">寻找你感兴趣的领域</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/CSS/" style="font-size: 1.05rem;">CSS<sup>4</sup></a><a href="/tags/C%E8%AF%AD%E8%A8%80/" style="font-size: 1.05rem;">C语言<sup>34</sup></a><a href="/tags/C%E8%AF%AD%E8%A8%80%E5%B0%8F%E6%B8%B8%E6%88%8F/" style="font-size: 1.05rem;">C语言小游戏<sup>3</sup></a><a href="/tags/C%E8%AF%AD%E8%A8%80%E8%AF%AD%E6%B3%95/" style="font-size: 1.05rem;">C语言语法<sup>12</sup></a><a href="/tags/Hexo/" style="font-size: 1.05rem;">Hexo<sup>1</sup></a><a href="/tags/Tag-Plugins/" style="font-size: 1.05rem;">Tag Plugins<sup>1</sup></a><a href="/tags/butterfly/" style="font-size: 1.05rem;">butterfly<sup>6</sup></a><a href="/tags/hexo/" style="font-size: 1.05rem;">hexo<sup>7</sup></a><a href="/tags/%E4%B8%BB%E8%B0%93%E4%B8%80%E8%87%B4/" style="font-size: 1.05rem;">主谓一致<sup>1</sup></a><a href="/tags/%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF/" style="font-size: 1.05rem;">信息技术<sup>1</sup></a><a href="/tags/%E5%89%8D%E7%AB%AF/" style="font-size: 1.05rem;">前端<sup>4</sup></a><a href="/tags/%E6%95%B0%E5%AD%97%E5%AA%92%E4%BD%93%E5%A4%84%E7%90%86%E5%8F%8A%E5%BA%94%E7%94%A8/" style="font-size: 1.05rem;">数字媒体处理及应用<sup>1</sup></a><a href="/tags/%E6%97%A5%E5%B8%B8/" style="font-size: 1.05rem;">日常<sup>2</sup></a><a href="/tags/%E7%A7%BB%E5%8A%A8%E9%80%9A%E4%BF%A1%E4%B8%8E%E4%BA%92%E8%81%94%E7%BD%91/" style="font-size: 1.05rem;">移动通信与互联网<sup>1</sup></a><a href="/tags/%E7%BC%96%E7%A8%8B%E9%A2%98/" style="font-size: 1.05rem;">编程题<sup>19</sup></a><a href="/tags/%E8%8B%B1%E8%AF%AD/" style="font-size: 1.05rem;">英语<sup>9</sup></a><a href="/tags/%E8%8B%B1%E8%AF%AD%E4%BB%8E%E5%8F%A5/" style="font-size: 1.05rem;">英语从句<sup>3</sup></a><a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/" style="font-size: 1.05rem;">计算机基础<sup>5</sup></a><a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/" style="font-size: 1.05rem;">计算机组成原理<sup>1</sup></a><a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" style="font-size: 1.05rem;">计算机网络<sup>1</sup></a><a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%BD%AF%E4%BB%B6/" style="font-size: 1.05rem;">计算机软件<sup>1</sup></a><a href="/tags/%E9%9D%9E%E8%B0%93%E8%AF%AD%E5%8A%A8%E8%AF%8D/" style="font-size: 1.05rem;">非谓语动词<sup>1</sup></a><a href="/tags/%E9%AD%94%E6%94%B9/" style="font-size: 1.05rem;">魔改<sup>4</sup></a></div></div><hr/></div></div><div class="console-card history"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-box-archiv"></i><span>文章</span></div><div class="card-archives"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-archive"></i><span>归档</span><a class="card-more-btn" href="/archives/" title="查看更多">
+    <i class="anzhiyufont anzhiyu-icon-angle-right"></i></a></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/04/"><span class="card-archive-list-date">四月 2024</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">2</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/03/"><span class="card-archive-list-date">三月 2024</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/11/"><span class="card-archive-list-date">十一月 2023</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">2</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/10/"><span class="card-archive-list-date">十月 2023</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/09/"><span class="card-archive-list-date">九月 2023</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">3</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/08/"><span class="card-archive-list-date">八月 2023</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">3</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/07/"><span class="card-archive-list-date">七月 2023</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/06/"><span class="card-archive-list-date">六月 2023</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li></ul></div><hr/></div></div></div><div class="button-group"><div class="console-btn-item"><a class="darkmode_switchbutton" title="显示模式切换" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-moon"></i></a></div><div class="console-btn-item" id="consoleHideAside" onclick="anzhiyu.hideAsideBtn()" title="边栏显示控制"><a class="asideSwitch"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></a></div><div class="console-btn-item on" id="consoleCommentBarrage" onclick="anzhiyu.switchCommentBarrage()" title="热评开关"><a class="commentBarrage"><i class="anzhiyufont anzhiyu-icon-message"></i></a></div><div class="console-btn-item" id="consoleMusic" onclick="anzhiyu.musicToggle()" title="音乐开关"><a class="music-switch"><i class="anzhiyufont anzhiyu-icon-music"></i></a></div></div><div class="console-mask" onclick="anzhiyu.hideConsole()" href="javascript:void(0);"></div></div><div class="nav-button" id="nav-totop"><a class="totopbtn" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i><span id="percent" onclick="anzhiyu.scrollToDest(0,500)">0</span></a></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);" title="切换"><i class="anzhiyufont anzhiyu-icon-bars"></i></a></div></div></div></nav><div id="post-info"><div id="post-firstinfo"><div class="meta-firstline"><a class="post-meta-original">原创</a><span class="post-meta-categories"><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-inbox post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/" itemprop="url">计算机基础</a></span><span class="article-meta tags"><a class="article-meta__tags" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>计算机基础</span></a><a class="article-meta__tags" href="/tags/%E6%95%B0%E5%AD%97%E5%AA%92%E4%BD%93%E5%A4%84%E7%90%86%E5%8F%8A%E5%BA%94%E7%94%A8/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>数字媒体处理及应用</span></a></span></div></div><h1 class="post-title" itemprop="name headline">数字媒体处理及应用</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" itemprop="dateCreated datePublished" datetime="2024-04-02T06:23:11.000Z" title="发表于 2024-04-02 14:23:11">2024-04-02</time><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-history post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" itemprop="dateCreated datePublished" datetime="2024-04-02T06:41:55.103Z" title="更新于 2024-04-02 14:41:55">2024-04-02</time></span></div><div class="meta-secondline"><span class="post-meta-separator"></span><span class="post-meta-wordcount"><i class="anzhiyufont anzhiyu-icon-file-word post-meta-icon" title="文章字数"></i><span class="post-meta-label" title="文章字数">字数总计:</span><span class="word-count" title="文章字数">7.5k</span><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-clock post-meta-icon" title="阅读时长"></i><span class="post-meta-label" title="阅读时长">阅读时长:</span><span>22分钟</span></span><span class="post-meta-separator">       </span><span class="post-meta-position" title="作者IP属地为南京"><i class="anzhiyufont anzhiyu-icon-location-dot"></i>南京</span></div></div></div><section class="main-hero-waves-area waves-area"><svg class="waves-svg" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M -160 44 c 30 0 58 -18 88 -18 s 58 18 88 18 s 58 -18 88 -18 s 58 18 88 18 v 44 h -352 Z"></path></defs><g class="parallax"><use href="#gentle-wave" x="48" y="0"></use><use href="#gentle-wave" x="48" y="3"></use><use href="#gentle-wave" x="48" y="5"></use><use href="#gentle-wave" x="48" y="7"></use></g></svg></section><div id="post-top-cover"><img class="nolazyload" id="post-top-bg" src="https://bu.dusays.com/2023/09/29/651641735bedd.webp"></div></header><main id="blog-container"><div class="layout" id="content-inner"><div id="post"><div class="post-ai-description"><div class="ai-title"><i class="anzhiyufont anzhiyu-icon-bilibili"></i><div class="ai-title-text">AI-摘要</div><i class="anzhiyufont anzhiyu-icon-arrow-rotate-right"></i><i class="anzhiyufont anzhiyu-icon-circle-dot" title="朗读摘要"></i><div id="ai-tag">Tianli GPT</div></div><div class="ai-explanation">AI初始化中...</div><div class="ai-btn-box"><div class="ai-btn-item">介绍自己 🙈</div><div class="ai-btn-item">生成本文简介 👋</div><div class="ai-btn-item">推荐相关文章 📖</div><div class="ai-btn-item">前往主页 🏠</div><div class="ai-btn-item" id="go-tianli-blog">前往爱发电购买</div></div><script data-pjax src="/js/anzhiyu/ai_abstract.js"></script></div><article class="post-content" id="article-container" itemscope itemtype="https://blog.mxne.cn/posts/390.html"><header><a class="post-meta-categories" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/" itemprop="url">计算机基础</a><a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/" tabindex="-1" itemprop="url">计算机基础</a><a href="/tags/%E6%95%B0%E5%AD%97%E5%AA%92%E4%BD%93%E5%A4%84%E7%90%86%E5%8F%8A%E5%BA%94%E7%94%A8/" tabindex="-1" itemprop="url">数字媒体处理及应用</a><h1 id="CrawlerTitle" itemprop="name headline">数字媒体处理及应用</h1><span itemprop="author" itemscope itemtype="http://schema.org/Person">Mxne</span><time itemprop="dateCreated datePublished" datetime="2024-04-02T06:23:11.000Z" title="发表于 2024-04-02 14:23:11">2024-04-02</time><time itemprop="dateCreated datePublished" datetime="2024-04-02T06:41:55.103Z" title="更新于 2024-04-02 14:41:55">2024-04-02</time></header><h2 id="文本与文本处理"><a href="#文本与文本处理" class="headerlink" title="文本与文本处理"></a>文本与文本处理</h2><p>文本由一系列“字符”(character) 组成，每个字符均使用二进制编码表示。</p>
+<p>文本在计算机中的处理过程是：</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="E:/Blog/post-img/image-20230828133935298.png" alt="image-20230828133935298"></p>
+<blockquote>
+<p>字符：文字的基本元素是字母和符号，统称为“字符”(character)。</p>
+<p>字符集：一组特定字符的集合。不同的字符集包含的字符数目与内容不同，如: 中文字符集、西文字符集、日文字符集等。</p>
+<p>字符的编码：字符集中每个字符的二进位表示，称为该字符的编码或代码(code)；不同的字符其编码各不相同</p>
+</blockquote>
+<h3 id="西文字符集"><a href="#西文字符集" class="headerlink" title="西文字符集"></a>西文字符集</h3><h4 id="ASCII"><a href="#ASCII" class="headerlink" title="ASCII"></a>ASCII</h4><p>又名：<strong>美国标准信息交换码</strong>。基本的ASCII字符集共有<strong>128个字符</strong>，<strong>96个可打印字符</strong>（常用的字母、数字、标点符号等），<strong>32个控制字符</strong>。</p>
+<h5 id="ASCII的编码和存储"><a href="#ASCII的编码和存储" class="headerlink" title="ASCII的编码和存储"></a>ASCII的编码和存储</h5><p>基本ASCIⅡ编码每个字符使用<strong>7个二进位进行编码</strong>，<strong>8个二进位来存储</strong>。每个字节中多余出来的一位（最高位）置为“<strong>0</strong>”，用作<strong>奇偶校验</strong>。</p>
+<h3 id="汉字编码"><a href="#汉字编码" class="headerlink" title="汉字编码"></a>汉字编码</h3><h4 id="GB2312"><a href="#GB2312" class="headerlink" title="GB2312"></a>GB2312</h4><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="E:/Blog/post-img/image-20230901165417044.png" alt="image-20230901165417044"></p>
+<p>每一个GB2312汉字使用<strong>16位(2个字节)表示</strong>。<u>为了与ASCI字符相区别</u>，每个字节的<strong>最高位均为“1”</strong>，这种高位均为1的双字节汉字编码就称为GB2312汉字的“机内码”（又称“内码”）。【均为简体字】</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="E:/Blog/post-img/image-20230901165047873.png" alt="image-20230901165047873"></p>
+<h4 id="GBK"><a href="#GBK" class="headerlink" title="GBK"></a>GBK</h4><p>GBK是我国1995年发布的，全称为《汉字内码扩充规范》，他一共有<strong>21003个汉字和883个图形符号</strong>，除了GB2312中的全部汉字和符号之外，还收录了<u>包括繁体字在内的大量汉字和符号</u>。【<strong>向下兼容GB2312</strong>】</p>
+<p>第一个字节最高位必须为“1”，第二个字节子高位可以是“1”也可以是“0”。</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="E:/Blog/post-img/image-20230901165847523.png" alt="image-20230901165847523"></p>
+<h4 id="GB18030"><a href="#GB18030" class="headerlink" title="GB18030"></a>GB18030</h4><p>目的：<u>为了保护我国已有的大量信息资源，既能与UCS/Unicode编码标准接轨，又能向下兼容GB2312和GBK汉字编码标准。</u>共有27000多个汉字（收录字符最多）</p>
+<p>不等长编码</p>
+<h4 id="UCS-Unicode"><a href="#UCS-Unicode" class="headerlink" title="UCS/Unicode"></a>UCS/Unicode</h4><p>目的：为了能实现全球所有不同语言文字统一编码的国际编码标准</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="E:/Blog/post-img/image-20230901170711018.png" alt="image-20230901170711018"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="E:/Blog/post-img/image-20230901173127448.png" alt="image-20230901173127448"></p>
+<p>计算机中文字符号可采用不同的编码标准，计算机生成和处理的数字文档中对采用何种编码一般会有说明（标志）<br>PC和智能手机都能支持多国文字（包括汉字）的的输入、输出、存储、处理、显示和传输，但默认采用哪种语言文字和编码标准，可在操作系统和APP中设置或说明<br>不同操作系统、不同编程语言和不同APP默认采用的字符集及其编码并不一致，相互间进行通信和处理时，往往需要进行编码转换，若出错则会出现乱码。</p>
+<blockquote>
+<p>区位码 + 2020H = 国标码</p>
+<p>国标码 + 8080H = 机内码</p>
+<p>区位码 + A0A0H = 机内码</p>
+<h5 id="区位码"><a href="#区位码" class="headerlink" title="区位码"></a>区位码</h5><p>GB2312将所有的汉字编入一个94×94的二维表中，行和列共同定位一个字，行就是区，列就是位，合并就是区位码。区位码是一个四位的十进制数，前两位叫区码，后两位叫位码。</p>
+<p>区位码可以表示某个具体的汉字，但是无法与ASC码进行兼容。</p>
+<h5 id="汉字的国标码（交换码）"><a href="#汉字的国标码（交换码）" class="headerlink" title="汉字的国标码（交换码）"></a>汉字的国标码（交换码）</h5><p>GB2312不仅仅包含中文汉字，也包含各种那个字母数字符号，与ASCII编码中的字母数字符号重复，故覆盖ASCII中符号数字字母部分，将其中的符号重新编入GB2312中，而对于ASCII中前32个控制字符继续沿用，所以保留前32字符，就需要将汉字编码向后偏移32，对应十六进制就是20，故：区位码+2020H=国标码</p>
+<h5 id="汉字的机内码"><a href="#汉字的机内码" class="headerlink" title="汉字的机内码"></a>汉字的机内码</h5><p>汉字机内码，又称“汉字ASCII码”，简称“内码”，国标码覆盖了ASCII码，但是计算机内部仍然存在ASC码，所以某些汉字的国标码仍有可能会和ASC码进行重复，重复的后果会产生乱码，所以不应覆盖，而是要兼容ASCII码，故根据ASCII码最高位通常为0的特点，将国标码每个字节的最高位从0换成1与ASCII码进行区分，故：国标码+8080H=机内码</p>
+</blockquote>
+<h3 id="文字符号的输入"><a href="#文字符号的输入" class="headerlink" title="文字符号的输入"></a>文字符号的输入</h3><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="E:/Blog/post-img/image-20230902100322100.png" alt="image-20230902100322100"></p>
+<h4 id="键盘输入"><a href="#键盘输入" class="headerlink" title="键盘输入"></a>键盘输入</h4><p>分类：</p>
+<ul>
+<li>数字编码：电报码、区位码</li>
+<li>字音编码：26键</li>
+<li>字形编码：五笔</li>
+<li>形音编码</li>
+</ul>
+<p><strong>汉字的输入码不是唯一的，汉字的机内码是唯一的。</strong></p>
+<h4 id="联机手写输入"><a href="#联机手写输入" class="headerlink" title="联机手写输入"></a>联机手写输入</h4><p>优点：</p>
+<ul>
+<li>自然，流畅</li>
+<li>小型化，适合移动计算</li>
+</ul>
+<p>不足：</p>
+<ul>
+<li>别速度和正确性还需提高</li>
+<li>书写要求还要降低</li>
+</ul>
+<h4 id="语言输入"><a href="#语言输入" class="headerlink" title="语言输入"></a>语言输入</h4><p>优点：</p>
+<ul>
+<li>自然，方便，适合移动计算</li>
+</ul>
+<p>不足：</p>
+<ul>
+<li>对说话人、说话方式、说话内容的适应能力要改进</li>
+<li>识别速度和正确性还需进一步提高</li>
+</ul>
+<h3 id="文本的分类"><a href="#文本的分类" class="headerlink" title="文本的分类"></a>文本的分类</h3><p><strong>（1）按照是否具有排版格式∶</strong> <strong>简单文本</strong> <strong>和</strong> <strong>丰富格式文本</strong> <strong>。</strong></p>
+<p><strong>（2）按照文本内容的组织方式∶</strong> <strong>线性文本</strong> <strong>和</strong> <strong>超文本</strong> <strong>。</strong></p>
+<h4 id="简单文本（纯文本）"><a href="#简单文本（纯文本）" class="headerlink" title="简单文本（纯文本）"></a>简单文本（纯文本）</h4><p>简单文本是由一连串表达正文内容的字符（包括汉字）的编码所组成，它几乎不包含任何格式信息和结构信息。其文件的后缀名为<code>.txt</code><br>简单文本的文件体积小，通用性好，几乎所有的文字处理软件都能识别和处理，但是<u>它没有字体、字号的变化，不能插入图片、表格，也不能建立超链接。</u>Windows记事本采用的是UTF-8编码。</p>
+<h4 id="丰富格式文本"><a href="#丰富格式文本" class="headerlink" title="丰富格式文本"></a>丰富格式文本</h4><p>有字体字号等属性变化、设置了段落和页面排版格式的文本称为“丰富格式文本”。<br>丰富格式文本中，除了<strong>正文</strong>内容之外，还使用了许多“<strong>标记</strong>“来描述字符的属性和格式的设置以及插入图、表、公式、表格等等。【组成：正文+标记】</p>
+<p>常见标记语言：HTML（超文本标记语言）、XML（可扩展标记语言）</p>
+<p><strong>不同软件制作的丰富格式文本其文件扩展名各不相同</strong>。例如.doc、.docx、.html、.pdf、rtf、<strong>hlp（帮助文件）</strong>一般并<strong>不兼容</strong>，需要使用不同的APP进行处理。</p>
+<h4 id="超文本"><a href="#超文本" class="headerlink" title="超文本"></a>超文本</h4><p>传统纸质文本内容的组织是线性的，而超文本概念是对传统文本的一种扩展。<u>除了顺序阅读方式外，还可以通过文本内部所设置的链接进行跳转、导航、回溯等操作。</u><br>超文本采用<strong>网状结构</strong>来组织信息，文本中的各个部分按照其内容的逻辑关系互相链接。WWW网页就是典型<br>的超文本结构。</p>
+<p><strong>超链是有向的</strong>，起点位置称为<strong>涟源</strong>(HTML文档中称为<strong>锚</strong>)，目的地称为<strong>链宿</strong>。涟源（锚）和链宿使用TML标记语言指出。</p>
+<p><strong>超文本属于丰富格式文本。</strong></p>
+<h3 id="文本的编辑、排版与处理"><a href="#文本的编辑、排版与处理" class="headerlink" title="文本的编辑、排版与处理"></a>文本的编辑、排版与处理</h3><h4 id="文本的编辑"><a href="#文本的编辑" class="headerlink" title="文本的编辑"></a>文本的编辑</h4><p>目的：确保文本内容正确无误。</p>
+<p>操作：对字、词、句和段落进行添加、删除、修改等操作。</p>
+<p>MS Word的功能：</p>
+<ul>
+<li>在文本的任何位置都可以<strong>插入</strong>新的文字</li>
+<li>从文本的任何位置都可以<strong>删除</strong>不需要的文字</li>
+<li>将一段文字从一处<strong>移动</strong>到另一处</li>
+<li>将一段文字从一处<strong>复制</strong>到另一处</li>
+<li>在文本中自动<strong>查找</strong>指定的词语</li>
+<li>用一个词语自动<strong>替换</strong>文本中指定的词语</li>
+</ul>
+<h4 id="文本的排版"><a href="#文本的排版" class="headerlink" title="文本的排版"></a>文本的排版</h4><p>目的：<strong>使文本清晰、美观、便于阅读</strong></p>
+<p>操作内容：对文本中的字符、段落乃至整篇文章的格式进行设计和调整，分成3个层次：</p>
+<ul>
+<li>对<strong>字符</strong>格式进行设置</li>
+<li>对<strong>段落</strong>格式进行设置</li>
+<li>对<strong>文档</strong>页面进行格式设置</li>
+</ul>
+<h4 id="文本的处理"><a href="#文本的处理" class="headerlink" title="文本的处理"></a>文本的处理</h4><p>对文木中所含文字信息的形音义等进行分析和处理。例如：字数统计、文语转换、文摘生成、文本检索等。</p>
+<ul>
+<li>字数统计，词频统计，简/繁体相互转换，汉字/拼音相互转换</li>
+<li>词语排序，词语错误检测，文句语法检查</li>
+<li>自动分词，词性标注，词义辨识，大陆/台湾术语转换</li>
+<li>关键词提取，文摘自动生成，文本分类</li>
+<li>文本检索（<u>关键词检索、全文检索</u>），文本过滤</li>
+<li>文语转换（语音合成）</li>
+<li>文种转换（机器翻译）</li>
+<li>篇章理解，自动问答，自动写作等</li>
+<li>文本压缩，文本加密，文本著作权保护</li>
+</ul>
+<h5 id="文本检索"><a href="#文本检索" class="headerlink" title="文本检索"></a>文本检索</h5><ul>
+<li>关键词检索</li>
+<li>全文检索：搜索引擎</li>
+</ul>
+<blockquote>
+<p>文本检索存在准确性问题，因此，检索结果并非全部都是用户想要的。</p>
+</blockquote>
+<h3 id="文本的展现"><a href="#文本的展现" class="headerlink" title="文本的展现"></a>文本的展现</h3><p>文本展现方式：</p>
+<ul>
+<li>打印输出：纸质</li>
+<li>屏幕显示：电子书</li>
+</ul>
+<p>文本展现的过程：</p>
+<ol>
+<li><p>对文本的格式描述进行解释。</p>
+</li>
+<li><p>生成文字和图表的映像（bitmap）。</p>
+</li>
+<li><p>传送到显示器或打印机输出。</p>
+</li>
+</ol>
+<h5 id="字库"><a href="#字库" class="headerlink" title="字库"></a>字库</h5><p>定义：同一种字体的所有字符的形状描述信息的集合。</p>
+<p>2种不同的字库</p>
+<ul>
+<li>点阵描述（计算存储空间）</li>
+<li>轮廓描述(Truetype)</li>
+</ul>
+<blockquote>
+<p>字体VS字库：不同的字体（宋体、仿宋、楷体、黑体等）对应不同的字库</p>
+<p>字符集VS字库：在同一个字符集下，文本的输出所使用的字库不同</p>
+</blockquote>
+<h2 id="图像与图形"><a href="#图像与图形" class="headerlink" title="图像与图形"></a>图像与图形</h2><p>计算机中的“图”按其<strong>生成方法</strong>可以分成两类：取样图像（或点阵图像或位图图像）和（矢量）图形。</p>
+<h3 id="图像"><a href="#图像" class="headerlink" title="图像"></a>图像</h3><h4 id="图像的获取"><a href="#图像的获取" class="headerlink" title="图像的获取"></a>图像的获取</h4><p>从<u><strong>现实世界</strong></u>中获得数字图像的过程称为图像的“获取”。常用的图像获取设备：手机、扫描仪、数码相机、监控摄像头等。</p>
+<h5 id="图像获取过程⭐"><a href="#图像获取过程⭐" class="headerlink" title="图像获取过程⭐"></a>图像获取过程⭐</h5><p>图像获取的过程需要使用光学、超声波或X射线等生成景物的映像（模拟信号）并进行数字化，处理步骤：</p>
+<ol>
+<li>扫描：将景物映像划分为M×N个网格，每个网格称为一个取样点。从而将景物映像转换为M×N个取样点构成的阵列。</li>
+<li>分色：将每个取样点的颜色分解成红、绿、蓝三基色(R、G、B),若生成灰度或黑白图像则不进行分色处理。</li>
+<li>取样：测量每个取样点的每个分量（基色）的亮度（也称为“灰度”值）</li>
+<li>量化：对取样点每个分量的亮度值进行A/D转换，即把模拟量使用数字量来表示。(8位-12位二进制正整数)</li>
+</ol>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="E:/Blog/post-img/image-20230904153304697.png" alt="image-20230904153304697"></p>
+<h4 id="图像的表示"><a href="#图像的表示" class="headerlink" title="图像的表示"></a>图像的表示</h4><p>一幅图像由M(列)×N(行)个取样点组成，每个取样点是组成取样图像的基本单位，称为像素。</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="E:/Blog/post-img/image-20230905101033731.png" alt="image-20230905101033731"></p>
+<h4 id="图像的主要参数"><a href="#图像的主要参数" class="headerlink" title="图像的主要参数"></a>图像的主要参数</h4><ol>
+<li>图像大小/图像分辨率：也称为图像分辨率，用水平分辨率 x 垂直分辨率表示。</li>
+</ol>
+<blockquote>
+<p>注意：垂直分辨率：矩阵的行数；水平分辨率：矩阵的列数</p>
+</blockquote>
+<ol>
+<li><p>位平面数：即<u>像素的颜色分量的数目</u>。</p>
+<ul>
+<li>黑白或灰度图像只有一个位平面</li>
+<li>彩色图像有3个或更多的位平面</li>
+</ul>
+</li>
+<li><p>像素深度：指<u>每个像素用多少个二进位来表示</u>，它是像素的所有颜色分量的二进位数目之和。像素深度决定了该图像可表示的不同颜色（或不同亮度）的最大数目。</p>
+<ul>
+<li>单色图像若像素深度是8位，则不同亮度等级的总数为 $2^{8}=256$。</li>
+<li>R、G、B三基色组成的彩色图像，若3个分量的像素位数都是8位，则该图像的像素深度为24，不同颜色数目最多为：$x^{8+8+8}=x^{24}$ 【<strong>真彩色图像24位</strong>】</li>
+</ul>
+</li>
+<li><p>颜色空间类型：指彩色图像所使用的颜色描述方法，也叫颜色模型。【以下颜色模型可以互相转换】</p>
+<ul>
+<li>显示器 —–→ RGB模型（红、绿、蓝）</li>
+<li>彩色打印机 —–→ CMYK模型（青、品红、黄、黑）</li>
+<li>图像编辑软件 —–→ HSB模型（色彩、饱和度、亮度)</li>
+<li>PAL制彩色电视 —–→ YUV模型(Y亮度信号，UV两种色度信号)</li>
+</ul>
+</li>
+</ol>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="E:/Blog/post-img/image-20230905103355175.png" alt="image-20230905103355175"></p>
+<h4 id="数字图像的数据量"><a href="#数字图像的数据量" class="headerlink" title="数字图像的数据量"></a>数字图像的数据量</h4><p>数字图像数据量的计算公式（以<strong>字节</strong>为单位）：【未压缩】</p>
+<p><code>图像数据量 = 水平分辨率 × 垂直分辨率 × 像素深度 / 8</code></p>
+<p>几种常用格式的图像的数据量（未压缩)：</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="E:/Blog/post-img/image-20230905104059113.png" alt="image-20230905104059113"></p>
+<p>压缩之后数字图像的数据量计算（以字节为单位）：【压缩后】</p>
+<p><code>图像数据量 = (水平分辨率 × 垂直分辨率 × 像素深度 / 8) / 压缩比</code></p>
+<h4 id="数字图像的压缩"><a href="#数字图像的压缩" class="headerlink" title="数字图像的压缩"></a>数字图像的压缩</h4><h5 id="图像数据压缩的必要性"><a href="#图像数据压缩的必要性" class="headerlink" title="图像数据压缩的必要性"></a>图像数据压缩的必要性</h5><ul>
+<li>节省存储数字图像所需要的存储器容量</li>
+<li>提高图像的传输速度，减少通信费用，</li>
+</ul>
+<h5 id="图像数据压缩的两种类型"><a href="#图像数据压缩的两种类型" class="headerlink" title="图像数据压缩的两种类型"></a>图像数据压缩的两种类型</h5><ul>
+<li>无损压缩：用压缩后的数据还原出来的图像<strong>没有任何误差</strong>【完美还原】</li>
+<li>有损压缩：用压缩后的数据还原出来的图像<strong>有一定的误差</strong></li>
+</ul>
+<h5 id="压缩编码方法的评价标准⭐"><a href="#压缩编码方法的评价标准⭐" class="headerlink" title="压缩编码方法的评价标准⭐"></a>压缩编码方法的评价标准⭐</h5><ul>
+<li>压缩倍数的高低（压缩比大小）</li>
+<li>重建图像的质量（有损压缩时）</li>
+<li>压缩算法的复杂程度</li>
+</ul>
+<h4 id="图像文件格式⭐"><a href="#图像文件格式⭐" class="headerlink" title="图像文件格式⭐"></a>图像文件格式⭐</h4><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="E:/Blog/post-img/image-20230905112000197.png" alt="image-20230905112000197"></p>
+<h5 id="BMP格式"><a href="#BMP格式" class="headerlink" title="BMP格式"></a>BMP格式</h5><ul>
+<li>BMP图像格式是<strong>Windows</strong>操作系统下使用的一种标准图像格式，<strong>几乎所有的Windows应用软件都支持。</strong>支持单色、16色、256色、真彩色图像。</li>
+<li>一个文件一幅图像，可以进行无损压缩，也可不压缩。</li>
+</ul>
+<h5 id="TIF格式"><a href="#TIF格式" class="headerlink" title="TIF格式"></a>TIF格式</h5><p><strong>大量用于扫描仪和桌面出版</strong></p>
+<h5 id="GIF格式"><a href="#GIF格式" class="headerlink" title="GIF格式"></a>GIF格式</h5><ul>
+<li>颜色数目<strong>不超过256色</strong>，适合用作插图、剪贴画等色彩数要求不高的场合，文件特别小，适合网络传输。</li>
+<li>GIF图像格式能支持<strong>动画</strong>、<strong>透明背景</strong>(JPEG不支持)。</li>
+<li>GIF图像格式具有累进显示功能，适合网络浏览器观看。</li>
+</ul>
+<h5 id="JPEG格式"><a href="#JPEG格式" class="headerlink" title="JPEG格式"></a>JPEG格式</h5><ul>
+<li>JPEG是静止图像数据压缩编码的<strong>国际标准</strong>，采用JPEG标准的图像文件扩展名是jpg。【大多有损】</li>
+<li>JPEG特别适合各种连续色调的彩色或灰度图像，在计算机和<strong>数码相机</strong>中已得到广泛应用。</li>
+<li>JPEG的最新标准是JPEG2000(图像文件扩展名是.jp2),它采用<strong>更先进的技术</strong>，可取得更好的效果，目前在医学图像处理中使用。</li>
+</ul>
+<h5 id="PNG格式"><a href="#PNG格式" class="headerlink" title="PNG格式"></a>PNG格式</h5><p>90年代中期由W3C开发，主要在互联网上使用。<br>保留了GIF文件的特性。<br>增加新功能，如支持每个像素为48比特的真彩色图像，支持每个像素为16比特的灰度图像，添加通道等。</p>
+<h5 id="Webp格式"><a href="#Webp格式" class="headerlink" title="Webp格式"></a>Webp格式</h5><p>Google公司推出的图像文件格式。<br>压缩率比JPEG和PNG显著提高，网页平均加载时间大约可以减少1/3。<br>WebP格式图像编码时间比JPEG格式图像要长得多。<br>尚未得到广泛支持。</p>
+<h4 id="数字图像处理"><a href="#数字图像处理" class="headerlink" title="数字图像处理"></a>数字图像处理</h4><h5 id="主要目的"><a href="#主要目的" class="headerlink" title="主要目的"></a>主要目的</h5><ol>
+<li>提高图像的视觉质量</li>
+<li>恢复与重建有失真和畸变的图像</li>
+<li>图像分析，包括：图像的分类、识别和理解等</li>
+<li>图像数据的变换、编码和数据压缩</li>
+<li>图像的存储、管理与检索</li>
+<li>图像内容与知识产权的保护</li>
+</ol>
+<h5 id="数字图像处理软件"><a href="#数字图像处理软件" class="headerlink" title="数字图像处理软件"></a>数字图像处理软件</h5><ul>
+<li>Word和PowerPoint具有基本的图像编辑功能</li>
+<li>Windows附件中的“画图”软件</li>
+<li>微软Office工具中的Picture Manager</li>
+<li>ACD System公司的ACDSee32</li>
+<li><strong>Adobe PhotoShop</strong></li>
+</ul>
+<h5 id="PS主要功能包括"><a href="#PS主要功能包括" class="headerlink" title="PS主要功能包括"></a>PS主要功能包括</h5><ul>
+<li>图像的控制与显示</li>
+<li>图像区域的选择</li>
+<li>图像的编辑操作</li>
+<li>图像的滤镜操作</li>
+<li>绘图功能</li>
+<li>文字编辑功能</li>
+<li>图层操作</li>
+</ul>
+<h3 id="图形"><a href="#图形" class="headerlink" title="图形"></a>图形</h3><p>通过计算机和软件对景物的结构、形状与外貌进行描述（称为“<strong>建模</strong>“），然后根据该描述和选定的观察位置及光线状况，生成该景物的图形称为“<strong>绘制</strong>“)。计算机图形也称为<strong>计算机合成图像/矢量图形</strong>。</p>
+<h4 id="计算机绘图过程"><a href="#计算机绘图过程" class="headerlink" title="计算机绘图过程"></a>计算机绘图过程</h4><ol>
+<li><p>建模：首先是使用计算机描述景物的结构、形状与外貌，然后再根据其描述和用户观察景物的位置及光线情况，生成该景物的图像并在屏幕上或打印机绘图仪上输出，景物在计算机内的描述即为该景物的模型，通常需要使用专门的软件来完成：</p>
+</li>
+<li><p>绘制：计算机根据景物的模型生成其图像的过程称为“绘制”，也叫做图像合成，这是借助计算机中的绘制软件和显卡实现的。</p>
+</li>
+</ol>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="E:/Blog/post-img/image-20230905114514681.png" alt="image-20230905114514681"></p>
+<h4 id="景物的两类建模方法"><a href="#景物的两类建模方法" class="headerlink" title="景物的两类建模方法"></a>景物的两类建模方法</h4><ol>
+<li>规则形体（如工业产品等）<br>可以使用各种几何元素（点、线、面、体等）以及表面材料的性质进行描述，所建立的模型称为“<strong>几何模型</strong>”。</li>
+<li>不规则形体（如自然产物或现象）<br>需要找出它们的结构和生成规律，并使用相应的算法来描述其规律（如描述树木、花草、烟火、毛发、山脉等），这种模型称为“<strong>过程模型</strong>”或“<strong>算法模型</strong>”。</li>
+</ol>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="E:/Blog/post-img/image-20230905115026374.png" alt="image-20230905115026374"></p>
+<h4 id="计算机图形的应用"><a href="#计算机图形的应用" class="headerlink" title="计算机图形的应用"></a>计算机图形的应用</h4><ul>
+<li>计算机铺助设计(CAD)和计算机辅助制造(CAM)。</li>
+<li>利用计算机生成各种地形图、交通图、天气图、海洋图、石油开采图等。</li>
+<li>作战指挥和军事训练。</li>
+<li>计算机动画和计算机艺术。</li>
+<li>其它：电子出版、数据处理、工业监控、辅助教学、软件工程等。</li>
+</ul>
+<h4 id="矢量绘图软件"><a href="#矢量绘图软件" class="headerlink" title="矢量绘图软件"></a>矢量绘图软件</h4><ol>
+<li>专业绘图软件：<br>AutoCAD、PROTEL和CAXA电子图板（机械、建筑等）<br>MAPInfo、ARCInfo、SuperMap GIS(地图、地理信息系统)</li>
+<li>办公与事务处理、平面设计、电子出版等使用的绘图软件：<br>Corel公司的CorelDraw,<br>Adobe公司的lllustrator,<br>Macromedia公司的FreeHand,<br>微软公司的Microsoft Visio等</li>
+<li>MS Office中内嵌的绘图软件：<br>Word和PowerPoint中的绘图功能（简单的二维图形)</li>
+</ol>
+<h2 id="数字音频及应用"><a href="#数字音频及应用" class="headerlink" title="数字音频及应用"></a>数字音频及应用</h2><p>声音(sound)由振动产生，通过空气等介质进行传播。声音是一种波，它由许多不同频率的谐波组成，谐波的频率范围称为声音的“带宽”。</p>
+<p>人耳可听见的声音(<strong>20Hz~20kHz</strong>)在信息技术中称为音频信号，简称音频(audio)。</p>
+<p>两种音频：</p>
+<ul>
+<li><strong>话音或语音</strong>(speech),专指人的说话声音，带宽仅为<strong>300~3400Hz</strong></li>
+<li><strong>全频带声音</strong>（如音乐声、风雨声、汽车声等），其带宽可达到<strong>20Hz~2OkHz</strong></li>
+</ul>
+<h3 id="数字音频的获取"><a href="#数字音频的获取" class="headerlink" title="数字音频的获取"></a>数字音频的获取</h3><p>音频是<strong>模拟信号</strong>。为了使用计算机进行处理，必须将它转换成二进制编码表示的形式。</p>
+<p>这个过程称为音频信号的数字化。数字化的步骤：</p>
+<ol>
+<li><strong>取样</strong>：把时间上连续的音频信号离散成不连续的一系列的样本，<u>取样频率<strong>不应低于</strong>音频信号<strong>最高频率</strong>的<strong>两倍</strong></u>。<u><strong>语音</strong>取样频率一般为<strong>8-16kHz</strong>,<strong>全频带音频</strong>的取样频率应在<strong>40kHz以上</strong>。</u></li>
+<li><strong>量化</strong>：取样得到的每一个样本一般使用8、12、14或16位二进制整数表示（称为“量化精度”），<strong>精度越高，声音保真度越好，噪音越低。</strong>【A/D转换】</li>
+<li><strong>编码</strong>：经过取样量化得到的数据还必须进行数据压缩，以减少数据量，并按照某种格式对数据进行组织，以便计算机存储处理与传输。</li>
+</ol>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="E:/Blog/post-img/image-20230905133224116.png" alt="image-20230905133224116"></p>
+<h4 id="数字音频的获取设备"><a href="#数字音频的获取设备" class="headerlink" title="数字音频的获取设备"></a>数字音频的获取设备</h4><p>数字音频获取设备包括<strong>麦克风</strong>（话筒）和<strong>声卡</strong>。</p>
+<p>麦克风（话筒）的作用是将<strong>声波转换成电信号</strong>，然后再由声卡进行数字化。</p>
+<p>声卡既负责音频信号的获取，也负责音频信号的重建，它控制并完成声音的输入输出。</p>
+<h5 id="声卡"><a href="#声卡" class="headerlink" title="声卡"></a>声卡</h5><p>主要功能</p>
+<ul>
+<li>音频信号的获取与数字化</li>
+<li>音频信号的重建与播放</li>
+<li>MIDI声音的输入</li>
+<li>MIDI声音的合成与播放等</li>
+</ul>
+<p>声卡以<strong>数字信号处理器(DSP)</strong>为核心，DSP是一种专用的微处理器，它在完成数字音频的编码、解码、MIDI声音的合成以及音频编辑操作中起着重要作用。</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="E:/Blog/post-img/image-20230905133712703.png" alt="image-20230905133712703"></p>
+<h3 id="数字音频的输出"><a href="#数字音频的输出" class="headerlink" title="数字音频的输出"></a>数字音频的输出</h3><p>计算机输出声音的过程通常分成两步：</p>
+<ul>
+<li>重建：把音频信号从数字形式转换成模拟信号形式，由声卡完成。</li>
+<li>播放：将模拟音频信号经处理和放大后送到音箱（扬声器）。</li>
+</ul>
+<p>声音的<strong>重建</strong>是音频信号数字化的逆过程，分成三个步骤：⭐</p>
+<ol>
+<li>解码：把压缩编码后的数字音频恢复到压缩编码前的状态。</li>
+<li>数模转换：把音频样本从数字量转换成模拟量。</li>
+<li>插值：把时间上离散的音频信号转换成在时间上连续的模拟音频信号。</li>
+</ol>
+<h4 id="音响"><a href="#音响" class="headerlink" title="音响"></a>音响</h4><ol>
+<li>普通音箱：接收的是重建的<strong>模拟声音信号</strong>。</li>
+<li>数字音箱：直接接<strong>收数字声音信号</strong>，失真更小。</li>
+</ol>
+<h3 id="数字音频的主要参数"><a href="#数字音频的主要参数" class="headerlink" title="数字音频的主要参数"></a>数字音频的主要参数</h3><ol>
+<li>取样频率<ul>
+<li><strong>语音</strong>的取样频率低，一般为8k~16kHz</li>
+<li><strong>全频带</strong>声音（如音乐）取样频率高，一般44.1k~48kHz</li>
+</ul>
+</li>
+<li>量化位数：通常是8、12或16位</li>
+<li>声道数目：单声道为1，双声道为2【立体声=双声道】</li>
+<li>码率（比特率）：每秒钟的数据量、</li>
+</ol>
+<h3 id="数字音频的码率"><a href="#数字音频的码率" class="headerlink" title="数字音频的码率"></a>数字音频的码率</h3><p>码率：指的是<strong>每秒钟</strong>有多少二进位</p>
+<p><strong>未压缩</strong>时数字音频的码率计算公式：</p>
+<p><code>码率 = 取样频率 × 量化位数 × 声道数（单位：bit/s)</code></p>
+<p>两种常用数字音频的主要参数：⭐【背】</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="E:/Blog/post-img/image-20230905135437702.png" alt="image-20230905135437702"></p>
+<p><strong>压缩后</strong>数字音频的码率为：</p>
+<p><code>压缩后的码率 = 未压缩时的码率 / 压缩比</code></p>
+<p>音频的数据量为：</p>
+<p><code>音频的数据量 = 码率 x 播放时间</code></p>
+<ul>
+<li><p>CD唱片的码率=44.1kHz×16bits×2=176.4KB/s</p>
+</li>
+<li><p>CD唱片1小时的数据量=176.4KB/s×60×60=635040KB=635MB</p>
+</li>
+</ul>
+<h3 id="音频文件格式"><a href="#音频文件格式" class="headerlink" title="音频文件格式"></a>音频文件格式</h3><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="E:/Blog/post-img/image-20230905140107462.png" alt="image-20230905140107462"></p>
+<h3 id="音频常用的压缩编码"><a href="#音频常用的压缩编码" class="headerlink" title="音频常用的压缩编码"></a>音频常用的压缩编码</h3><div class="table-container">
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>声道数目</th>
+<th>主要应用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MPEG-1 audio层1</td>
+<td>2</td>
+<td>数字盒式录音带</td>
+</tr>
+<tr>
+<td>MPEG-1 audio层2</td>
+<td>2</td>
+<td>DAB、VCD</td>
+</tr>
+<tr>
+<td>MPEG-1 audio层3</td>
+<td>2</td>
+<td>Internet、MP3</td>
+</tr>
+<tr>
+<td>MPEG-2 audio</td>
+<td>5.1，7.1</td>
+<td>同MPEG-1</td>
+</tr>
+<tr>
+<td>Dolby AC-3</td>
+<td>5.1，7.1</td>
+<td>DVD、DTV、家庭影院</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="数字音频的编辑【考点mini】"><a href="#数字音频的编辑【考点mini】" class="headerlink" title="数字音频的编辑【考点mini】"></a>数字音频的编辑【考点mini】</h3><p>Windows附件中娱乐类的“录音机”程序是一个非常简单的数字音频编辑器，具有如下功能：</p>
+<ul>
+<li>录制音频</li>
+<li>编辑音频</li>
+<li>声音的效果处理</li>
+<li>格式转换</li>
+<li>播放音频（只能播放wav格式的音频文件）</li>
+</ul>
+<h3 id="数字音频的播放软件【考点mini】"><a href="#数字音频的播放软件【考点mini】" class="headerlink" title="数字音频的播放软件【考点mini】"></a>数字音频的播放软件【考点mini】</h3><p>Windows操作系统捆绑了一个应用软件，称为Vindows媒体播放器（简称“WMP”),该软件可以播放音频、视频文件也可以显示图片。该软件播放的音频文件格式包括MP3、WMA、WAV、MIDI等，也可以播放CD和DVD光盘。还具有管理功能，支持播放列表，支持从CD光盘上抓取音轨复制到硬盘，支持刻录CD光盘，支持与便携式音乐设备进行同步。</p>
+<h3 id="语音识别"><a href="#语音识别" class="headerlink" title="语音识别"></a>语音识别</h3><p>将人的说话声音转换成相应的文字，这需要计算机自动识别出语音信号中的单词和语汇，甚至理解其语义（内容）。</p>
+<p>应用：语音拨号、语音导航、设备操作控制、语音文档检索、听写数据录入、计算机同声翻译等。</p>
+<p>几种不同复杂程度的语音识别技术：</p>
+<ol>
+<li>孤立语音/连续语音识别</li>
+<li>小词汇量/大词汇量语音识别</li>
+<li>特定人/非特定人语音识别</li>
+</ol>
+<h3 id="语音合成"><a href="#语音合成" class="headerlink" title="语音合成"></a>语音合成</h3><p>计算机合成音频就是计算机模仿人说话或演奏音乐。</p>
+<p>计算机合成音频有两类：</p>
+<h4 id="计算机合成话音（语音）"><a href="#计算机合成话音（语音）" class="headerlink" title="计算机合成话音（语音）"></a>计算机合成话音（语音）</h4><p>计算机模仿人把一段文字朗读出来，即把文字转换为说话声音（简称为<strong>文语转换【TTS】</strong>)。</p>
+<p>应用：有声查询、文稿校对、语言学习、语音秘书、自动报警、残疾人服务等。</p>
+<h5 id="文语转换-TTS"><a href="#文语转换-TTS" class="headerlink" title="文语转换(TTS)"></a>文语转换(TTS)</h5><p>按照文本（书面语言）进行语音合成的过程</p>
+<p>文语转换过程原理上分成三步：</p>
+<ol>
+<li>文本分析：对文本进行分析，判断每一个字的正确读音，将文字序列转换成一串发音符号（如国际音标或汉语拼音)。</li>
+<li>韵律分析：根据文句的结构、位置、使用的标点符号以及上下文等，确定发音时语气的变换以及读音的轻重缓急，这些都由一组韵律控制参数来进行控制。</li>
+<li>语音合成：根据发音标注，从语音库中取出相应的语音基元，按照韵律控制参数的要求，利用特定的语音合成技术对语音基元进行调整和修改，最终合成出符合要求的流畅自然的语音。</li>
+</ol>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="E:/Blog/post-img/image-20230909121245173.png" alt="image-20230909121245173"></p>
+<h4 id="计算机合成音乐-MIDI"><a href="#计算机合成音乐-MIDI" class="headerlink" title="计算机合成音乐(MIDI):"></a>计算机合成音乐(MIDI):</h4><p>计算机模拟各种乐器发声并按照乐谱演奏音乐。</p>
+<p>应用：计算机作曲、配器等。</p>
+<p>计算机合成音乐需要三个要素：乐器、乐谱和“演奏员”。MIDI文件（后缀为.mid或.midi)相当于乐谱，媒体播放器相当于演奏员，在计算机中它需要发送指令到声卡音乐合成器中，音乐合成器会将指令进行合成模拟乐器发声。</p>
+<p>播放：由PC机中的声卡合成，由Windows的媒体播放器软件播放（<strong>音乐质量受声卡档次影响</strong>)</p>
+<h5 id="MIDI的优点"><a href="#MIDI的优点" class="headerlink" title="MIDI的优点"></a>MIDI的优点</h5><ul>
+<li><strong>数据量极小</strong>（比CD立体声少3个数量级，比MP3少3个数量级）</li>
+<li>易于制作和编辑修改</li>
+<li>可以与波形声音同时播放</li>
+</ul>
+<h5 id="MIDI的不足"><a href="#MIDI的不足" class="headerlink" title="MIDI的不足"></a>MIDI的不足</h5><ul>
+<li>能合成音乐【<strong>纯音乐</strong>】，不能合成歌曲和语言</li>
+<li>音质与硬件设备相关</li>
+</ul>
+<h2 id="数字视频及应用"><a href="#数字视频及应用" class="headerlink" title="数字视频及应用"></a>数字视频及应用</h2><h3 id="数字视频"><a href="#数字视频" class="headerlink" title="数字视频"></a>数字视频</h3><p>泛指内容随时间变化的一个图象序列，又叫运动图象或活动图象(motion picture)。</p>
+<p>常见视频：电视，电影，动画等。</p>
+<p>视频的特点：</p>
+<ul>
+<li>内容随时间而变化，</li>
+<li>伴随有与画面动作同步的声音（伴音），</li>
+<li>人类接受的信息70%来自视觉，其中活动图象是信息量最丰富、直观、生动、具体的一种承载信息的媒体。</li>
+<li>视频信息的处理是多媒体技术的核心。</li>
+</ul>
+<h4 id="数字视频的主要参数"><a href="#数字视频的主要参数" class="headerlink" title="数字视频的主要参数"></a>数字视频的主要参数</h4><ul>
+<li>帧频、帧速率：一每秒钟显示多少帧图像，单位是fps。</li>
+<li>图像扫描方式<ul>
+<li>隔行扫描(interlaced scanning)</li>
+<li>逐行扫描方式(progressive scanning)</li>
+</ul>
+</li>
+<li>帧大小：每帧图像的分辨率，即图像宽度x图像高度（单位：像素）</li>
+<li>颜色深度、像素深度：图像中每个像素的二进位数目（单位：bit)</li>
+</ul>
+<h4 id="数字视频信号的获取"><a href="#数字视频信号的获取" class="headerlink" title="数字视频信号的获取"></a>数字视频信号的获取</h4><p>视频信号的数字化过程：</p>
+<p>先将RGB三基色转换为Y、U、V(亮度和2个色差信号)，经滤波后再分别作取样、量化和编码处理，得到数字视频的3个分量。</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="E:/Blog/post-img/image-20230909123812911.png" alt="image-20230909123812911"></p>
+<h5 id="数字视频的获取设备"><a href="#数字视频的获取设备" class="headerlink" title="数字视频的获取设备"></a>数字视频的获取设备</h5><ul>
+<li>视频采集卡（简称视频卡）。</li>
+<li>数字摄像头，通过光学镜头和CCD或CMOS采集动态图像，转换成数字信号并输入PC机。</li>
+<li>脱机获取设备：数码摄像机。</li>
+</ul>
+<h4 id="视频编码"><a href="#视频编码" class="headerlink" title="视频编码"></a>视频编码</h4><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="E:/Blog/post-img/image-20230909151018711.png" alt="image-20230909151018711"></p>
+<h4 id="数字视频的应用"><a href="#数字视频的应用" class="headerlink" title="数字视频的应用"></a>数字视频的应用</h4><ol>
+<li><p>可视电话：通话双方能互相看见的一种电话系统。<br>电话机具有摄像、显示、声音等功能，内置高质量CCD镜头及MODEM。</p>
+</li>
+<li><p>视频会议：多人同时参与的一种音/视频通信系统。<br>类似于可视电话，但多人参加通话，提供的功能也更加丰富。<br>两种实施方式：<br>通过电信局的数字通信网进行（政府系统的视频会议，图像和声音的质量好，保密性强）。<br>在互联网上进行，例如使用下列即时通信软件<br>iPad/iPhone的FaceTime,腾迅的QQ,微信等。</p>
+</li>
+<li><p><strong>VCD</strong></p>
+<p>又叫：点播电视、<strong>视频点播</strong></p>
+<p>定义：用户可以根据自己的需要主动收看电视节目</p>
+</li>
+</ol>
+<p>光盘在数字视频存储中的应用：</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="E:/Blog/post-img/image-20230909151717158.png" alt="image-20230909151717158"></p>
+<h4 id="流媒体技术"><a href="#流媒体技术" class="headerlink" title="流媒体技术"></a>流媒体技术</h4><p>在因特网上收听（看）音（视）频节目的2种方式：</p>
+<ul>
+<li>下载存储方式：先下载存储在计算机中，下载完毕后再播放（缺点：需要等待较长时间，并需要较大的存储容量）</li>
+<li>流式传输方式：边下载、边播放（优点：只需要下载一部分数据之后，就可以开始一边播放一边下载，等待时间短、存储需求小)【流媒体】</li>
+</ul>
+<p><strong>流媒体</strong>就是一种允许在网络上让用户一边下载一边收看（听）音视频媒体的<strong>媒体分发(delivery)技术</strong>。</p>
+<h3 id="计算机动画"><a href="#计算机动画" class="headerlink" title="计算机动画"></a>计算机动画</h3><p>计算机动画一使用计算机生成一系列内容连续的画面供实时演播的一种技术，<u>它是一种计算机合成的数字视频，而不是用摄像机拍摄的“自然视频”。</u></p>
+<p>计算机动画制作包括：在计算机中建立景物的模型、描述它们的运动、生成一系列逼真的图像</p>
+<p>三维计算机动画制作过程分以下几个阶段：</p>
+<p>(1)描述景物的形状与结构（建模)<br>(2)确定景物的颜色和材质（纹理）<br>(3)设置灯光和确定虚拟摄像机的位置<br>(4)描述场景中物体的运动和摄像机的移动<br>(5)绘制一系列的图像<br>(6)输出动画结果</p>
+<h4 id="Flash动画"><a href="#Flash动画" class="headerlink" title="Flash动画"></a>Flash动画</h4><p>Flash动画的图像主要有矢量图形构成，因此不管怎样放大缩小它都清晰可见。<br>Flsh动画的文件扩展名为<code>.swf</code>,它的数据量较小，便于在互联网上传输。</p>
+</article><div class="post-copyright"><div class="copyright-cc-box"><i class="anzhiyufont anzhiyu-icon-copyright"></i></div><div class="post-copyright__author_box"><a class="post-copyright__author_img" href="/" title="头像"><img class="post-copyright__author_img_back" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/02/05/63df7de56a470.webp" title="头像" alt="头像"><img class="post-copyright__author_img_front" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/02/05/63df7de56a470.webp" title="头像" alt="头像"></a><div class="post-copyright__author_name">Mxne</div><div class="post-copyright__author_desc">Infinite Progress</div></div><div class="post-copyright__post__info"><a class="post-copyright__original" title="该文章为原创文章，注意版权协议" href="https://blog.mxne.cn/posts/390.html">原创</a><a class="post-copyright-title"><span onclick="rm.copyPageUrl('https://blog.mxne.cn/posts/390.html')">数字媒体处理及应用</span></a></div><div class="post-tools" id="post-tools"><div class="post-tools-left"><div class="rewardLeftButton"><div class="post-reward" onclick="anzhiyu.addRewardMask()"><div class="reward-button button--animated" title="赞赏作者"><i class="anzhiyufont anzhiyu-icon-hand-heart-fill"></i>打赏作者</div><div class="reward-main"><div class="reward-all"><span class="reward-title">感谢你赐予我前进的力量</span><ul class="reward-group"><li class="reward-item"><a href="https://bu.dusays.com/2023/04/29/644caea1be856.webp" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/04/29/644caea1be856.webp" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="https://bu.dusays.com/2023/04/29/644caea1be720.webp" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/04/29/644caea1be720.webp" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul><a class="reward-main-btn" href="/about/#about-reward" target="_blank"><div class="reward-text">赞赏者名单</div><div class="reward-dec">因为你们的支持让我意识到写文章的价值🙏</div></a></div></div></div><div id="quit-box" onclick="anzhiyu.removeRewardMask()" style="display: none"></div><div class="reward-link mode"><a class="reward-link-button" href="/wechat/"><i class="anzhiyufont anzhiyu-icon-plant-fill"></i>运营模式与责任</a></div></div><div class="shareRight"><div class="share-link mobile"><div class="share-qrcode"><div class="share-button" title="使用手机访问这篇文章"><i class="anzhiyufont anzhiyu-icon-qrcode"></i></div><div class="share-main"><div class="share-main-all"><div id="qrcode" title="https://blog.mxne.cn/posts/390.html"></div><div class="reward-dec">使用手机访问这篇文章</div></div></div></div></div><div class="share-link weibo"><a class="share-button" target="_blank" href="https://service.weibo.com/share/share.php?title=数字媒体处理及应用&amp;url=https://blog.mxne.cn/posts/390.html&amp;pic=https://bu.dusays.com/2023/09/29/651641735bedd.webp" rel="external nofollow noreferrer noopener"><i class="anzhiyufont anzhiyu-icon-weibo"></i></a></div><script>function copyCurrentPageUrl() {
+  var currentPageUrl = window.location.href;
+  var input = document.createElement("input");
+  input.setAttribute("value", currentPageUrl);
+  document.body.appendChild(input);
+  input.select();
+  input.setSelectionRange(0, 99999);
+  document.execCommand("copy");
+  document.body.removeChild(input);
+}</script><div class="share-link copyurl"><div class="share-button" id="post-share-url" title="复制链接" onclick="copyCurrentPageUrl()"><i class="anzhiyufont anzhiyu-icon-link"></i></div></div></div></div></div><div class="post-copyright__notice"><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://blog.mxne.cn" target="_blank">Mxne</a>！</span></div></div><div class="post-tools-right"><div class="tag_share"><div class="post-meta__box"><div class="post-meta__box__tag-list"><a class="post-meta__box__tags" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>计算机基础<span class="tagsPageCount">5</span></a><a class="post-meta__box__tags" href="/tags/%E6%95%B0%E5%AD%97%E5%AA%92%E4%BD%93%E5%A4%84%E7%90%86%E5%8F%8A%E5%BA%94%E7%94%A8/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>数字媒体处理及应用<span class="tagsPageCount">1</span></a></div></div></div><div class="post_share"><div class="social-share" data-image="https://bu.dusays.com/2023/09/29/651641735bedd.webp" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.cbd.int/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"/><script src="https://cdn.cbd.int/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer="defer"></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/posts/31f1.html"><img class="next-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/09/29/651641735bedd.webp" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">移动通信与互联网</div></div></a></div></nav><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="anzhiyufont anzhiyu-icon-comments"></i><span> 评论</span></div><div class="comment-randomInfo"><a onclick="anzhiyu.addRandomCommentInfo()" href="javascript:void(0)">匿名评论</a><a href="/privacy" style="margin-left: 4px">隐私政策</a></div><div class="comment-tips" id="comment-tips"><span>✅ 你无需删除空行，直接评论以获取最佳展示效果</span></div></div><div class="comment-wrap"><div><div id="twikoo-wrap"></div></div></div></div><div class="comment-barrage"></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-content"><div class="author-info__sayhi" id="author-info__sayhi" onclick="anzhiyu.changeSayHelloText()"></div><div class="author-info-avatar"><img class="avatar-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/02/05/63df7de56a470.webp" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-status"><img class="g-status" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/08/24/64e6ce9c507bb.png" alt="status"/></div></div><div class="author-info__description"><div style="line-height:1.38;margin:0.6rem 0;text-align:justify;color:rgba(255, 255, 255, 0.8);">这有关于<b style="color:#fff">产品、设计、开发</b>相关的问题和看法，还有<b style="color:#fff">文章翻译</b>和<b style="color:#fff">分享</b>。</div><div style="line-height:1.38;margin:0.6rem 0;text-align:justify;color:rgba(255, 255, 255, 0.8);">相信你可以在这里找到对你有用的<b style="color:#fff">知识</b>和<b style="color:#fff">教程</b>。</div></div><div class="author-info__bottom-group"><a class="author-info__bottom-group-left" href="/about/"><h1 class="author-info__name">Mxne</h1><div class="author-info__desc">Infinite Progress</div></a><div class="card-info-social-icons is-center"><a class="social-icon faa-parent animated-hover" href="https://github.com/lmx0" target="_blank" title="Github"><i class="fab fa-github faa-tada"></i></a><a class="social-icon faa-parent animated-hover" href="mailto:2480602196@qq.com" target="_blank" title="Email"><i class="fas fa-envelope faa-tada"></i></a></div></div></div></div><div class="card-widget anzhiyu-right-widget" id="card-wechat" onclick="null"><div id="flip-wrapper"><div id="flip-content"><div class="face" style="background: url(https://bu.dusays.com/2023/02/05/63df7de63f146.png) center center / 100% no-repeat"></div><div class="back face" style="background: url(https://bu.dusays.com/2023/11/24/6560527ae43c1.png) center center / 100% no-repeat"></div></div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-bars"></i><span>文章目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%87%E6%9C%AC%E4%B8%8E%E6%96%87%E6%9C%AC%E5%A4%84%E7%90%86"><span class="toc-number">1.</span> <span class="toc-text">文本与文本处理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A5%BF%E6%96%87%E5%AD%97%E7%AC%A6%E9%9B%86"><span class="toc-number">1.1.</span> <span class="toc-text">西文字符集</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#ASCII"><span class="toc-number">1.1.1.</span> <span class="toc-text">ASCII</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#ASCII%E7%9A%84%E7%BC%96%E7%A0%81%E5%92%8C%E5%AD%98%E5%82%A8"><span class="toc-number">1.1.1.1.</span> <span class="toc-text">ASCII的编码和存储</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B1%89%E5%AD%97%E7%BC%96%E7%A0%81"><span class="toc-number">1.2.</span> <span class="toc-text">汉字编码</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#GB2312"><span class="toc-number">1.2.1.</span> <span class="toc-text">GB2312</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#GBK"><span class="toc-number">1.2.2.</span> <span class="toc-text">GBK</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#GB18030"><span class="toc-number">1.2.3.</span> <span class="toc-text">GB18030</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#UCS-Unicode"><span class="toc-number">1.2.4.</span> <span class="toc-text">UCS&#x2F;Unicode</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%8C%BA%E4%BD%8D%E7%A0%81"><span class="toc-number">1.2.4.1.</span> <span class="toc-text">区位码</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%B1%89%E5%AD%97%E7%9A%84%E5%9B%BD%E6%A0%87%E7%A0%81%EF%BC%88%E4%BA%A4%E6%8D%A2%E7%A0%81%EF%BC%89"><span class="toc-number">1.2.4.2.</span> <span class="toc-text">汉字的国标码（交换码）</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%B1%89%E5%AD%97%E7%9A%84%E6%9C%BA%E5%86%85%E7%A0%81"><span class="toc-number">1.2.4.3.</span> <span class="toc-text">汉字的机内码</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%87%E5%AD%97%E7%AC%A6%E5%8F%B7%E7%9A%84%E8%BE%93%E5%85%A5"><span class="toc-number">1.3.</span> <span class="toc-text">文字符号的输入</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%94%AE%E7%9B%98%E8%BE%93%E5%85%A5"><span class="toc-number">1.3.1.</span> <span class="toc-text">键盘输入</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%81%94%E6%9C%BA%E6%89%8B%E5%86%99%E8%BE%93%E5%85%A5"><span class="toc-number">1.3.2.</span> <span class="toc-text">联机手写输入</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AF%AD%E8%A8%80%E8%BE%93%E5%85%A5"><span class="toc-number">1.3.3.</span> <span class="toc-text">语言输入</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%87%E6%9C%AC%E7%9A%84%E5%88%86%E7%B1%BB"><span class="toc-number">1.4.</span> <span class="toc-text">文本的分类</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AE%80%E5%8D%95%E6%96%87%E6%9C%AC%EF%BC%88%E7%BA%AF%E6%96%87%E6%9C%AC%EF%BC%89"><span class="toc-number">1.4.1.</span> <span class="toc-text">简单文本（纯文本）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%B0%E5%AF%8C%E6%A0%BC%E5%BC%8F%E6%96%87%E6%9C%AC"><span class="toc-number">1.4.2.</span> <span class="toc-text">丰富格式文本</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%B6%85%E6%96%87%E6%9C%AC"><span class="toc-number">1.4.3.</span> <span class="toc-text">超文本</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%87%E6%9C%AC%E7%9A%84%E7%BC%96%E8%BE%91%E3%80%81%E6%8E%92%E7%89%88%E4%B8%8E%E5%A4%84%E7%90%86"><span class="toc-number">1.5.</span> <span class="toc-text">文本的编辑、排版与处理</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%96%87%E6%9C%AC%E7%9A%84%E7%BC%96%E8%BE%91"><span class="toc-number">1.5.1.</span> <span class="toc-text">文本的编辑</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%96%87%E6%9C%AC%E7%9A%84%E6%8E%92%E7%89%88"><span class="toc-number">1.5.2.</span> <span class="toc-text">文本的排版</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%96%87%E6%9C%AC%E7%9A%84%E5%A4%84%E7%90%86"><span class="toc-number">1.5.3.</span> <span class="toc-text">文本的处理</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%96%87%E6%9C%AC%E6%A3%80%E7%B4%A2"><span class="toc-number">1.5.3.1.</span> <span class="toc-text">文本检索</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%87%E6%9C%AC%E7%9A%84%E5%B1%95%E7%8E%B0"><span class="toc-number">1.6.</span> <span class="toc-text">文本的展现</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%AD%97%E5%BA%93"><span class="toc-number">1.6.0.1.</span> <span class="toc-text">字库</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%BE%E5%83%8F%E4%B8%8E%E5%9B%BE%E5%BD%A2"><span class="toc-number">2.</span> <span class="toc-text">图像与图形</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%BE%E5%83%8F"><span class="toc-number">2.1.</span> <span class="toc-text">图像</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9B%BE%E5%83%8F%E7%9A%84%E8%8E%B7%E5%8F%96"><span class="toc-number">2.1.1.</span> <span class="toc-text">图像的获取</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%9B%BE%E5%83%8F%E8%8E%B7%E5%8F%96%E8%BF%87%E7%A8%8B%E2%AD%90"><span class="toc-number">2.1.1.1.</span> <span class="toc-text">图像获取过程⭐</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9B%BE%E5%83%8F%E7%9A%84%E8%A1%A8%E7%A4%BA"><span class="toc-number">2.1.2.</span> <span class="toc-text">图像的表示</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9B%BE%E5%83%8F%E7%9A%84%E4%B8%BB%E8%A6%81%E5%8F%82%E6%95%B0"><span class="toc-number">2.1.3.</span> <span class="toc-text">图像的主要参数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%B0%E5%AD%97%E5%9B%BE%E5%83%8F%E7%9A%84%E6%95%B0%E6%8D%AE%E9%87%8F"><span class="toc-number">2.1.4.</span> <span class="toc-text">数字图像的数据量</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%B0%E5%AD%97%E5%9B%BE%E5%83%8F%E7%9A%84%E5%8E%8B%E7%BC%A9"><span class="toc-number">2.1.5.</span> <span class="toc-text">数字图像的压缩</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%9B%BE%E5%83%8F%E6%95%B0%E6%8D%AE%E5%8E%8B%E7%BC%A9%E7%9A%84%E5%BF%85%E8%A6%81%E6%80%A7"><span class="toc-number">2.1.5.1.</span> <span class="toc-text">图像数据压缩的必要性</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%9B%BE%E5%83%8F%E6%95%B0%E6%8D%AE%E5%8E%8B%E7%BC%A9%E7%9A%84%E4%B8%A4%E7%A7%8D%E7%B1%BB%E5%9E%8B"><span class="toc-number">2.1.5.2.</span> <span class="toc-text">图像数据压缩的两种类型</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%8E%8B%E7%BC%A9%E7%BC%96%E7%A0%81%E6%96%B9%E6%B3%95%E7%9A%84%E8%AF%84%E4%BB%B7%E6%A0%87%E5%87%86%E2%AD%90"><span class="toc-number">2.1.5.3.</span> <span class="toc-text">压缩编码方法的评价标准⭐</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9B%BE%E5%83%8F%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F%E2%AD%90"><span class="toc-number">2.1.6.</span> <span class="toc-text">图像文件格式⭐</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#BMP%E6%A0%BC%E5%BC%8F"><span class="toc-number">2.1.6.1.</span> <span class="toc-text">BMP格式</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#TIF%E6%A0%BC%E5%BC%8F"><span class="toc-number">2.1.6.2.</span> <span class="toc-text">TIF格式</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#GIF%E6%A0%BC%E5%BC%8F"><span class="toc-number">2.1.6.3.</span> <span class="toc-text">GIF格式</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#JPEG%E6%A0%BC%E5%BC%8F"><span class="toc-number">2.1.6.4.</span> <span class="toc-text">JPEG格式</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#PNG%E6%A0%BC%E5%BC%8F"><span class="toc-number">2.1.6.5.</span> <span class="toc-text">PNG格式</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Webp%E6%A0%BC%E5%BC%8F"><span class="toc-number">2.1.6.6.</span> <span class="toc-text">Webp格式</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%B0%E5%AD%97%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86"><span class="toc-number">2.1.7.</span> <span class="toc-text">数字图像处理</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%B8%BB%E8%A6%81%E7%9B%AE%E7%9A%84"><span class="toc-number">2.1.7.1.</span> <span class="toc-text">主要目的</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%95%B0%E5%AD%97%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E8%BD%AF%E4%BB%B6"><span class="toc-number">2.1.7.2.</span> <span class="toc-text">数字图像处理软件</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#PS%E4%B8%BB%E8%A6%81%E5%8A%9F%E8%83%BD%E5%8C%85%E6%8B%AC"><span class="toc-number">2.1.7.3.</span> <span class="toc-text">PS主要功能包括</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%BE%E5%BD%A2"><span class="toc-number">2.2.</span> <span class="toc-text">图形</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%98%E5%9B%BE%E8%BF%87%E7%A8%8B"><span class="toc-number">2.2.1.</span> <span class="toc-text">计算机绘图过程</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%99%AF%E7%89%A9%E7%9A%84%E4%B8%A4%E7%B1%BB%E5%BB%BA%E6%A8%A1%E6%96%B9%E6%B3%95"><span class="toc-number">2.2.2.</span> <span class="toc-text">景物的两类建模方法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E7%9A%84%E5%BA%94%E7%94%A8"><span class="toc-number">2.2.3.</span> <span class="toc-text">计算机图形的应用</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%9F%A2%E9%87%8F%E7%BB%98%E5%9B%BE%E8%BD%AF%E4%BB%B6"><span class="toc-number">2.2.4.</span> <span class="toc-text">矢量绘图软件</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E5%AD%97%E9%9F%B3%E9%A2%91%E5%8F%8A%E5%BA%94%E7%94%A8"><span class="toc-number">3.</span> <span class="toc-text">数字音频及应用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E5%AD%97%E9%9F%B3%E9%A2%91%E7%9A%84%E8%8E%B7%E5%8F%96"><span class="toc-number">3.1.</span> <span class="toc-text">数字音频的获取</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%B0%E5%AD%97%E9%9F%B3%E9%A2%91%E7%9A%84%E8%8E%B7%E5%8F%96%E8%AE%BE%E5%A4%87"><span class="toc-number">3.1.1.</span> <span class="toc-text">数字音频的获取设备</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%A3%B0%E5%8D%A1"><span class="toc-number">3.1.1.1.</span> <span class="toc-text">声卡</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E5%AD%97%E9%9F%B3%E9%A2%91%E7%9A%84%E8%BE%93%E5%87%BA"><span class="toc-number">3.2.</span> <span class="toc-text">数字音频的输出</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%9F%B3%E5%93%8D"><span class="toc-number">3.2.1.</span> <span class="toc-text">音响</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E5%AD%97%E9%9F%B3%E9%A2%91%E7%9A%84%E4%B8%BB%E8%A6%81%E5%8F%82%E6%95%B0"><span class="toc-number">3.3.</span> <span class="toc-text">数字音频的主要参数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E5%AD%97%E9%9F%B3%E9%A2%91%E7%9A%84%E7%A0%81%E7%8E%87"><span class="toc-number">3.4.</span> <span class="toc-text">数字音频的码率</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9F%B3%E9%A2%91%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F"><span class="toc-number">3.5.</span> <span class="toc-text">音频文件格式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9F%B3%E9%A2%91%E5%B8%B8%E7%94%A8%E7%9A%84%E5%8E%8B%E7%BC%A9%E7%BC%96%E7%A0%81"><span class="toc-number">3.6.</span> <span class="toc-text">音频常用的压缩编码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E5%AD%97%E9%9F%B3%E9%A2%91%E7%9A%84%E7%BC%96%E8%BE%91%E3%80%90%E8%80%83%E7%82%B9mini%E3%80%91"><span class="toc-number">3.7.</span> <span class="toc-text">数字音频的编辑【考点mini】</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E5%AD%97%E9%9F%B3%E9%A2%91%E7%9A%84%E6%92%AD%E6%94%BE%E8%BD%AF%E4%BB%B6%E3%80%90%E8%80%83%E7%82%B9mini%E3%80%91"><span class="toc-number">3.8.</span> <span class="toc-text">数字音频的播放软件【考点mini】</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%AD%E9%9F%B3%E8%AF%86%E5%88%AB"><span class="toc-number">3.9.</span> <span class="toc-text">语音识别</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%AD%E9%9F%B3%E5%90%88%E6%88%90"><span class="toc-number">3.10.</span> <span class="toc-text">语音合成</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%90%88%E6%88%90%E8%AF%9D%E9%9F%B3%EF%BC%88%E8%AF%AD%E9%9F%B3%EF%BC%89"><span class="toc-number">3.10.1.</span> <span class="toc-text">计算机合成话音（语音）</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%96%87%E8%AF%AD%E8%BD%AC%E6%8D%A2-TTS"><span class="toc-number">3.10.1.1.</span> <span class="toc-text">文语转换(TTS)</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%90%88%E6%88%90%E9%9F%B3%E4%B9%90-MIDI"><span class="toc-number">3.10.2.</span> <span class="toc-text">计算机合成音乐(MIDI):</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#MIDI%E7%9A%84%E4%BC%98%E7%82%B9"><span class="toc-number">3.10.2.1.</span> <span class="toc-text">MIDI的优点</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#MIDI%E7%9A%84%E4%B8%8D%E8%B6%B3"><span class="toc-number">3.10.2.2.</span> <span class="toc-text">MIDI的不足</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E5%AD%97%E8%A7%86%E9%A2%91%E5%8F%8A%E5%BA%94%E7%94%A8"><span class="toc-number">4.</span> <span class="toc-text">数字视频及应用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E5%AD%97%E8%A7%86%E9%A2%91"><span class="toc-number">4.1.</span> <span class="toc-text">数字视频</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%B0%E5%AD%97%E8%A7%86%E9%A2%91%E7%9A%84%E4%B8%BB%E8%A6%81%E5%8F%82%E6%95%B0"><span class="toc-number">4.1.1.</span> <span class="toc-text">数字视频的主要参数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%B0%E5%AD%97%E8%A7%86%E9%A2%91%E4%BF%A1%E5%8F%B7%E7%9A%84%E8%8E%B7%E5%8F%96"><span class="toc-number">4.1.2.</span> <span class="toc-text">数字视频信号的获取</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%95%B0%E5%AD%97%E8%A7%86%E9%A2%91%E7%9A%84%E8%8E%B7%E5%8F%96%E8%AE%BE%E5%A4%87"><span class="toc-number">4.1.2.1.</span> <span class="toc-text">数字视频的获取设备</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%A7%86%E9%A2%91%E7%BC%96%E7%A0%81"><span class="toc-number">4.1.3.</span> <span class="toc-text">视频编码</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%B0%E5%AD%97%E8%A7%86%E9%A2%91%E7%9A%84%E5%BA%94%E7%94%A8"><span class="toc-number">4.1.4.</span> <span class="toc-text">数字视频的应用</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B5%81%E5%AA%92%E4%BD%93%E6%8A%80%E6%9C%AF"><span class="toc-number">4.1.5.</span> <span class="toc-text">流媒体技术</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%8A%A8%E7%94%BB"><span class="toc-number">4.2.</span> <span class="toc-text">计算机动画</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Flash%E5%8A%A8%E7%94%BB"><span class="toc-number">4.2.1.</span> <span class="toc-text">Flash动画</span></a></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-history"></i><span>最近发布</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/posts/390.html" title="数字媒体处理及应用"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/09/29/651641735bedd.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="数字媒体处理及应用"/></a><div class="content"><a class="title" href="/posts/390.html" title="数字媒体处理及应用">数字媒体处理及应用</a><time datetime="2024-04-02T06:23:11.000Z" title="发表于 2024-04-02 14:23:11">2024-04-02</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/31f1.html" title="移动通信与互联网"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/09/29/651641735bedd.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="移动通信与互联网"/></a><div class="content"><a class="title" href="/posts/31f1.html" title="移动通信与互联网">移动通信与互联网</a><time datetime="2024-04-02T06:22:56.000Z" title="发表于 2024-04-02 14:22:56">2024-04-02</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/a811.html" title="考前编程汇总"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/10/14/652a32edd08e4.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="考前编程汇总"/></a><div class="content"><a class="title" href="/posts/a811.html" title="考前编程汇总">考前编程汇总</a><time datetime="2024-03-21T06:14:07.000Z" title="发表于 2024-03-21 14:14:07">2024-03-21</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/4e8f.html" title="三角形面积"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/11/17/6557201f6bb09.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="三角形面积"/></a><div class="content"><a class="title" href="/posts/4e8f.html" title="三角形面积">三角形面积</a><time datetime="2023-11-17T08:11:17.000Z" title="发表于 2023-11-17 16:11:17">2023-11-17</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/6c85.html" title="鞍点"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/11/17/6557201f68d99.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="鞍点"/></a><div class="content"><a class="title" href="/posts/6c85.html" title="鞍点">鞍点</a><time datetime="2023-11-17T08:11:06.000Z" title="发表于 2023-11-17 16:11:06">2023-11-17</time></div></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div id="footer_deal"><a class="deal_link" href="mailto:2480602196@qq.com" title="email"><i class="anzhiyufont anzhiyufont anzhiyu-icon-envelope"></i></a><a class="deal_link" target="_blank" rel="noopener" href="https://www.weibo.com/u/6336256416" title="微博"><i class="anzhiyufont anzhiyufont anzhiyu-icon-weibo"></i></a><a class="deal_link" href="https://blog.mxne.cn" title="facebook"><i class="anzhiyufont anzhiyufont anzhiyu-icon-facebook1"></i></a><a class="deal_link" href="/atom.xml" title="RSS"><i class="anzhiyufont anzhiyu-icon-rss"></i></a><img class="footer_mini_logo" title="返回顶部" alt="返回顶部" onclick="anzhiyu.scrollToDest(0, 500)" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/05/13/645f1a6ba4ae5.gif" size="50px"/><a class="deal_link" target="_blank" rel="noopener" href="https://github.com/lmx0" title="Github"><i class="anzhiyufont anzhiyufont anzhiyu-icon-github"></i></a><a class="deal_link" target="_blank" rel="noopener" href="https://space.bilibili.com/486897022" title="Bilibili"><i class="anzhiyufont anzhiyufont anzhiyu-icon-bilibili"></i></a><a class="deal_link" target="_blank" rel="noopener" href="https://www.douyin.com/user/MS4wLjABAAAAdqWLLeZbDyaywWhOMyrbt-dBnN0cHxPZ0mA0l3ItOeE" title="抖音"><i class="anzhiyufont anzhiyufont anzhiyu-icon-tiktok"></i></a></div><div id="anzhiyu-footer"><div class="footer-group"><div class="footer-title">服务</div><div class="footer-links"><a class="footer-item" title="51la统计" target="_blank" rel="noopener" href="https://v6.51.la/">51la统计</a><a class="footer-item" title="十年之约" target="_blank" rel="noopener" href="https://www.foreverblog.cn/">十年之约</a><a class="footer-item" title="开往" target="_blank" rel="noopener" href="https://github.com/travellings-link/travellings">开往</a></div></div><div class="footer-group"><div class="footer-title">主题</div><div class="footer-links"><a class="footer-item" title="主页" href="/">主页</a><a class="footer-item" title="主题" target="_blank" rel="noopener" href="https://github.com/anzhiyu-c/hexo-theme-anzhiyu">主题</a><a class="footer-item" title="更新日志" href="/update/">更新日志</a></div></div><div class="footer-group"><div class="footer-title">导航</div><div class="footer-links"><a class="footer-item" title="即刻短文" href="/essay/">即刻短文</a><a class="footer-item" title="友链文章" href="/fcircle/">友链文章</a><a class="footer-item" title="留言板" href="/comments/">留言板</a></div></div><div class="footer-group"><div class="footer-title">协议</div><div class="footer-links"><a class="footer-item" title="隐私协议" href="/privacy/">隐私协议</a><a class="footer-item" title="Cookies" href="/cookies/">Cookies</a><a class="footer-item" title="版权协议" href="/copyright/">版权协议</a></div></div><div class="footer-group"><div class="footer-title-group"><div class="footer-title">友链</div><a class="random-friends-btn" id="footer-random-friends-btn" href="javascript:addFriendLinksInFooter();" title="换一批友情链接"><i class="anzhiyufont anzhiyu-icon-arrow-rotate-right"></i></a></div><div class="footer-links" id="friend-links-in-footer"></div></div></div></div><div id="footer-bar"><div class="footer-bar-links"><div class="footer-bar-left"><div id="footer-bar-tips"><div class="copyright">&copy;2022 - 2024 By <a class="footer-bar-link" href="/" title="Mxne" target="_blank">Mxne</a></div></div><div id="footer-type-tips"></div></div><div class="footer-bar-right"><a class="footer-bar-link" target="_blank" rel="noopener" href="https://github.com/anzhiyu-c/hexo-theme-anzhiyu" title="主题">主题</a><a class="footer-bar-link" href="https://blog.mxne.cn/" title="Hello World！">Hello World！</a><a class="footer-bar-link cc" href="/copyright" title="cc协议"><i class="anzhiyufont anzhiyu-icon-copyright-line"></i><i class="anzhiyufont anzhiyu-icon-creative-commons-by-line"></i><i class="anzhiyufont anzhiyu-icon-creative-commons-nc-line"></i><i class="anzhiyufont anzhiyu-icon-creative-commons-nd-line"></i></a></div></div></div></footer></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="sidebar-site-data site-data is-center"></div><span class="sidebar-menu-item-title">功能</span><div class="sidebar-menu-item"><a class="darkmode_switchbutton menu-child" href="javascript:void(0);" title="显示模式"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span>显示模式</span></a></div><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">网页</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://index.lmx0.top/" title="主页"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/02/05/63df7de56a470.webp" alt="主页"/><span class="back-menu-item-text">主页</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://music.lmx0.top/" title="音乐"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/02/05/63df7de56a470.webp" alt="音乐"/><span class="back-menu-item-text">音乐</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://nav.lmx0.top/" title="引导页"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/02/05/63df7de56a470.webp" alt="引导页"/><span class="back-menu-item-text">引导页</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://news.lmx0.top/" title="每日新闻"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/02/05/63df7de56a470.webp" alt="每日新闻"/><span class="back-menu-item-text">每日新闻</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">线路</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://netlify.lmx0.top/" title="Netlify"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/02/05/63df7de56a470.webp" alt="Netlify"/><span class="back-menu-item-text">Netlify</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://cloudflare.lmx0.top/" title="Cloudflare"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/02/05/63df7de56a470.webp" alt="Cloudflare"/><span class="back-menu-item-text">Cloudflare</span></a></div></div></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 文章</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><i class="fa fa-box-archive faa-tada"></i><span> 归档</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><i class="fa fa-cube faa-tada"></i><span> 分类</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><i class="fa fa-tags faa-tada"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 我的</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/music/?id=8174994633&amp;server=netease"><i class="fa fa-music faa-tada"></i><span> 音乐馆</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/bangumis/"><i class="fab fa-bilibili faa-tada"></i><span> 追番页</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/album/"><i class="fa fa-image faa-tada"></i><span> 相册集</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 友链</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/link/"><i class="fa fa-link faa-tada"></i><span> 友情链接</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/fcircle/"><i class="fa fa-anchor faa-tada"></i><span> 友链鱼塘</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/comments/"><i class="fa fa-envelope faa-tada"></i><span> 留点什么</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 关于</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/about/"><i class="fa fa-id-card faa-tada"></i><span> 关于本人</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/essay/"><i class="fa fa-bars-staggered faa-tada"></i><span> 即刻短文</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/stars/"><i class="fa fa-map-signs faa-tada"></i><span> 网址导航</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/equipment/"><i class="anzhiyufont anzhiyu-icon-dice-d20 faa-tada" style="font-size: 0.9em;"></i><span> 我的装备</span></a></li></ul></div></div><span class="sidebar-menu-item-title">标签</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/CSS/" style="font-size: 0.88rem;">CSS<sup>4</sup></a><a href="/tags/C%E8%AF%AD%E8%A8%80/" style="font-size: 0.88rem; font-weight: 500; color: var(--anzhiyu-lighttext)">C语言<sup>34</sup></a><a href="/tags/C%E8%AF%AD%E8%A8%80%E5%B0%8F%E6%B8%B8%E6%88%8F/" style="font-size: 0.88rem;">C语言小游戏<sup>3</sup></a><a href="/tags/C%E8%AF%AD%E8%A8%80%E8%AF%AD%E6%B3%95/" style="font-size: 0.88rem;">C语言语法<sup>12</sup></a><a href="/tags/Hexo/" style="font-size: 0.88rem; font-weight: 500; color: var(--anzhiyu-lighttext)">Hexo<sup>1</sup></a><a href="/tags/Tag-Plugins/" style="font-size: 0.88rem;">Tag Plugins<sup>1</sup></a><a href="/tags/butterfly/" style="font-size: 0.88rem;">butterfly<sup>6</sup></a><a href="/tags/hexo/" style="font-size: 0.88rem;">hexo<sup>7</sup></a><a href="/tags/%E4%B8%BB%E8%B0%93%E4%B8%80%E8%87%B4/" style="font-size: 0.88rem;">主谓一致<sup>1</sup></a><a href="/tags/%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF/" style="font-size: 0.88rem;">信息技术<sup>1</sup></a><a href="/tags/%E5%89%8D%E7%AB%AF/" style="font-size: 0.88rem;">前端<sup>4</sup></a><a href="/tags/%E6%95%B0%E5%AD%97%E5%AA%92%E4%BD%93%E5%A4%84%E7%90%86%E5%8F%8A%E5%BA%94%E7%94%A8/" style="font-size: 0.88rem;">数字媒体处理及应用<sup>1</sup></a><a href="/tags/%E6%97%A5%E5%B8%B8/" style="font-size: 0.88rem;">日常<sup>2</sup></a><a href="/tags/%E7%A7%BB%E5%8A%A8%E9%80%9A%E4%BF%A1%E4%B8%8E%E4%BA%92%E8%81%94%E7%BD%91/" style="font-size: 0.88rem;">移动通信与互联网<sup>1</sup></a><a href="/tags/%E7%BC%96%E7%A8%8B%E9%A2%98/" style="font-size: 0.88rem;">编程题<sup>19</sup></a><a href="/tags/%E8%8B%B1%E8%AF%AD/" style="font-size: 0.88rem; font-weight: 500; color: var(--anzhiyu-lighttext)">英语<sup>9</sup></a><a href="/tags/%E8%8B%B1%E8%AF%AD%E4%BB%8E%E5%8F%A5/" style="font-size: 0.88rem;">英语从句<sup>3</sup></a><a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/" style="font-size: 0.88rem;">计算机基础<sup>5</sup></a><a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/" style="font-size: 0.88rem;">计算机组成原理<sup>1</sup></a><a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" style="font-size: 0.88rem;">计算机网络<sup>1</sup></a><a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%BD%AF%E4%BB%B6/" style="font-size: 0.88rem;">计算机软件<sup>1</sup></a><a href="/tags/%E9%9D%9E%E8%B0%93%E8%AF%AD%E5%8A%A8%E8%AF%8D/" style="font-size: 0.88rem;">非谓语动词<sup>1</sup></a><a href="/tags/%E9%AD%94%E6%94%B9/" style="font-size: 0.88rem;">魔改<sup>4</sup></a></div></div><hr/></div></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="anzhiyufont anzhiyu-icon-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="anzhiyufont anzhiyu-icon-gear"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="anzhiyufont anzhiyu-icon-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="anzhiyufont anzhiyu-icon-comments"></i></a><a id="switch-commentBarrage" href="javascript:anzhiyu.switchCommentBarrage();" title="开关弹幕"><i class="anzhiyufont anzhiyu-icon-danmu"></i></a><button id="go-up" type="button" title="回到顶部"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></button></div></div><div id="nav-music"><a id="nav-music-hoverTips" onclick="anzhiyu.musicToggle()" accesskey="m">播放音乐</a><div id="console-music-bg"></div><meting-js id="8174994633" server="netease" type="playlist" mutex="true" preload="none" theme="var(--anzhiyu-main)" data-lrctype="0" order="random" volume="0.7"></meting-js></div><div id="algolia-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><button class="search-close-button"><i class="anzhiyufont anzhiyu-icon-xmark"></i></button></nav><div class="search-wrap"><div id="algolia-search-input"></div><hr/><div id="algolia-search-results"><div id="algolia-hits"></div><div id="algolia-pagination"></div><div id="algolia-info"><div class="algolia-stats"></div><div class="algolia-poweredBy"></div></div></div></div></div><div id="search-mask"></div></div><div id="rightMenu"><div class="rightMenu-group rightMenu-small"><div class="rightMenu-item" id="menu-backward"><i class="anzhiyufont anzhiyu-icon-arrow-left"></i></div><div class="rightMenu-item" id="menu-forward"><i class="anzhiyufont anzhiyu-icon-arrow-right"></i></div><div class="rightMenu-item" id="menu-refresh"><i class="anzhiyufont anzhiyu-icon-arrow-rotate-right" style="font-size: 1rem;"></i></div><div class="rightMenu-item" id="menu-top"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></div></div><div class="rightMenu-group rightMenu-line rightMenuPlugin"><div class="rightMenu-item" id="menu-copytext"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制选中文本</span></div><div class="rightMenu-item" id="menu-pastetext"><i class="anzhiyufont anzhiyu-icon-paste"></i><span>粘贴文本</span></div><a class="rightMenu-item" id="menu-commenttext"><i class="anzhiyufont anzhiyu-icon-comment-medical"></i><span>引用到评论</span></a><div class="rightMenu-item" id="menu-newwindow"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开</span></div><div class="rightMenu-item" id="menu-copylink"><i class="anzhiyufont anzhiyu-icon-link"></i><span>复制链接地址</span></div><div class="rightMenu-item" id="menu-copyimg"><i class="anzhiyufont anzhiyu-icon-images"></i><span>复制此图片</span></div><div class="rightMenu-item" id="menu-downloadimg"><i class="anzhiyufont anzhiyu-icon-download"></i><span>下载此图片</span></div><div class="rightMenu-item" id="menu-newwindowimg"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开图片</span></div><div class="rightMenu-item" id="menu-search"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>站内搜索</span></div><div class="rightMenu-item" id="menu-searchBaidu"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>百度搜索</span></div><div class="rightMenu-item" id="menu-music-toggle"><i class="anzhiyufont anzhiyu-icon-play"></i><span>播放音乐</span></div><div class="rightMenu-item" id="menu-music-back"><i class="anzhiyufont anzhiyu-icon-backward"></i><span>切换到上一首</span></div><div class="rightMenu-item" id="menu-music-forward"><i class="anzhiyufont anzhiyu-icon-forward"></i><span>切换到下一首</span></div><div class="rightMenu-item" id="menu-music-playlist" onclick="window.open(&quot;https://y.qq.com/n/ryqq/playlist/8802438608&quot;, &quot;_blank&quot;);" style="display: none;"><i class="anzhiyufont anzhiyu-icon-radio"></i><span>查看所有歌曲</span></div><div class="rightMenu-item" id="menu-music-copyMusicName"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制歌名</span></div></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item menu-link" id="menu-randomPost"><i class="anzhiyufont anzhiyu-icon-shuffle"></i><span>随便逛逛</span></a><a class="rightMenu-item menu-link" href="/categories/"><i class="anzhiyufont anzhiyu-icon-cube"></i><span>博客分类</span></a><a class="rightMenu-item menu-link" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags"></i><span>文章标签</span></a></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item" id="menu-copy" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制地址</span></a><a class="rightMenu-item" id="menu-commentBarrage" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-message"></i><span class="menu-commentBarrage-text">关闭热评</span></a><a class="rightMenu-item" id="menu-darkmode" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span class="menu-darkmode-text">深色模式</span></a><a class="rightMenu-item" id="menu-translate" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-language"></i><span>轉為繁體</span></a></div></div><div id="rightmenu-mask"></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.cbd.int/@fancyapps/ui@5.0.28/dist/fancybox/fancybox.umd.js"></script><script src="https://cdn.cbd.int/instant.page@5.2.0/instantpage.js" type="module"></script><script src="https://cdn.cbd.int/vanilla-lazyload@17.8.5/dist/lazyload.iife.min.js"></script><script src="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.js"></script><script>var meting_api = "https://meting.qjqq.cn/?server=:server&type=:type&id=:id&auth=:auth&r=:r";
+</script><canvas id="universe"></canvas><script async src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/dark/dark.js"></script><script async src="/anzhiyu/random.js"></script><script src="https://cdn.cbd.int/algoliasearch@4.18.0/dist/algoliasearch-lite.umd.js"></script><script src="https://cdn.cbd.int/instantsearch.js@4.60.0/dist/instantsearch.production.min.js"></script><script src="/js/search/algolia.js"></script><div class="js-pjax"><script>(() => {
+  const init = () => {
+    twikoo.init(Object.assign({
+      el: '#twikoo-wrap',
+      envId: 'https://twikoo.mxne.cn/',
+      region: '',
+      onCommentLoaded: () => {
+        anzhiyu.loadLightbox(document.querySelectorAll('#twikoo .tk-content img:not(.tk-owo-emotion)'))
+      }
+    }, null))
+  }
+
+  const loadTwikoo = () => {
+    if (typeof twikoo === 'object') setTimeout(runFn,0)
+    else getScript('https://cdn.cbd.int/twikoo@1.6.25/dist/twikoo.all.min.js').then(runFn)
+  }
+
+  const getCount = () => {
+    const countELement = document.getElementById('twikoo-count')
+    if(!countELement) return
+    twikoo.getCommentsCount({
+      envId: 'https://twikoo.mxne.cn/',
+      region: '',
+      urls: [window.location.pathname],
+      includeReply: false
+    }).then(res => {
+      countELement.textContent = res[0].count
+    }).catch(err => {
+      console.error(err)
+    })
+  }
+
+  const runFn = () => {
+    init();
+    
+  }
+
+  if ('Twikoo' === 'Twikoo' || !false) {
+    if (false) anzhiyu.loadComment(document.getElementById('twikoo-wrap'), loadTwikoo)
+    else {
+      loadTwikoo()
+    }
+  } else {
+    window.loadOtherComment = loadTwikoo
+  }
+})()</script><input type="hidden" name="page-type" id="page-type" value="post"><script async src="/js/anzhiyu/comment_barrage.js"></script></div><script>window.addEventListener('load', () => {
+  const changeContent = (content) => {
+    if (content === '') return content
+
+    content = content.replace(/<img.*?src="(.*?)"?[^\>]+>/ig, '[图片]') // replace image link
+    content = content.replace(/<a[^>]+?href=["']?([^"']+)["']?[^>]*>([^<]+)<\/a>/gi, '[链接]') // replace url
+    content = content.replace(/<pre><code>.*?<\/pre>/gi, '[代码]') // replace code
+    content = content.replace(/<[^>]+>/g,"") // remove html tag
+
+    if (content.length > 150) {
+      content = content.substring(0,150) + '...'
+    }
+    return content
+  }
+
+  const getComment = () => {
+    const runTwikoo = () => {
+      twikoo.getRecentComments({
+        envId: 'https://twikoo.mxne.cn/',
+        region: '',
+        pageSize: 6,
+        includeReply: true
+      }).then(function (res) {
+        const twikooArray = res.map(e => {
+          return {
+            'content': changeContent(e.comment),
+            'avatar': e.avatar,
+            'nick': e.nick,
+            'url': e.url + '#' + e.id,
+            'date': new Date(e.created).toISOString()
+          }
+        })
+
+        saveToLocal.set('twikoo-newest-comments', JSON.stringify(twikooArray), 10/(60*24))
+        generateHtml(twikooArray)
+      }).catch(function (err) {
+        const $dom = document.querySelector('#card-newest-comments .aside-list')
+        $dom.textContent= "无法获取评论，请确认相关配置是否正确"
+      })
+    }
+
+    if (typeof twikoo === 'object') {
+      runTwikoo()
+    } else {
+      getScript('https://cdn.cbd.int/twikoo@1.6.25/dist/twikoo.all.min.js').then(runTwikoo)
+    }
+  }
+
+  const generateHtml = array => {
+    let result = ''
+
+    if (array.length) {
+      for (let i = 0; i < array.length; i++) {
+        result += '<div class=\'aside-list-item\'>'
+
+        if (true) {
+          const name = 'data-lazy-src'
+          result += `<a href='${array[i].url}' class='thumbnail'><img ${name}='${array[i].avatar}' alt='${array[i].nick}'><div class='name'><span>${array[i].nick} </span></div></a>`
+        }
+        
+        result += `<div class='content'>
+        <a class='comment' href='${array[i].url}' title='${array[i].content}'>${array[i].content}</a>
+        <time datetime="${array[i].date}">${anzhiyu.diffDate(array[i].date, true)}</time></div>
+        </div>`
+      }
+    } else {
+      result += '没有评论'
+    }
+
+    let $dom = document.querySelector('#card-newest-comments .aside-list')
+    $dom && ($dom.innerHTML= result)
+    window.lazyLoadInstance && window.lazyLoadInstance.update()
+    window.pjax && window.pjax.refresh($dom)
+  }
+
+  const newestCommentInit = () => {
+    if (document.querySelector('#card-newest-comments .aside-list')) {
+      const data = saveToLocal.get('twikoo-newest-comments')
+      if (data) {
+        generateHtml(JSON.parse(data))
+      } else {
+        getComment()
+      }
+    }
+  }
+
+  newestCommentInit()
+  document.addEventListener('pjax:complete', newestCommentInit)
+})</script><script>var visitorMail = "blog@mxne.cn";
+</script><script async data-pjax src="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/waterfall/waterfall.js"></script><script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/qrcodejs/1.0.0/qrcode.min.js"></script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.9/icon/ali_iconfont_css.css"><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/aplayer/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.cbd.int/anzhiyu-blog-static@1.0.1/js/APlayer.min.js"></script><script src="https://cdn.cbd.int/hexo-anzhiyu-music@1.0.1/assets/js/Meting2.min.js"></script><script src="https://cdn.cbd.int/pjax@0.2.8/pjax.min.js"></script><script>let pjaxSelectors = ["meta[property=\"og:image\"]","meta[property=\"og:title\"]","meta[property=\"og:url\"]","meta[property=\"og:type\"]","meta[property=\"og:site_name\"]","meta[property=\"og:description\"]","head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+  // removeEventListener scroll 
+  anzhiyu.removeGlobalFnEvent('pjax')
+  anzhiyu.removeGlobalFnEvent('themeChange')
+
+  document.getElementById('rightside').classList.remove('rightside-show')
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', e => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script charset="UTF-8" src="https://cdn.cbd.int/anzhiyu-theme-static@1.1.5/accesskey/accesskey.js"></script></div><div id="popup-window"><div class="popup-window-title">通知</div><div class="popup-window-divider"></div><div class="popup-window-content"><div class="popup-tip">你好呀</div><div class="popup-link"><i class="anzhiyufont anzhiyu-icon-arrow-circle-right"></i></div></div></div></body></html>
